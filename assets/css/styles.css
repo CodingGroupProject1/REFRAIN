@@ -1,0 +1,27 @@
+*box-sizing border-box {
+    margin: 0;
+    padding: 0;   
+  }
+
+
+.banner {
+    background: linear-gradient(to bottom, #ccffff 0%, #00ffcc 100%);
+    
+}
+
+.happy {
+    background: linear-gradient(to bottom right, #ffff66 0%, #66ffff 100%);
+
+}
+
+.sad {
+    background: linear-gradient(to bottom right, #3366cc 0%, #66ffff 100%);
+}
+
+.angry  {
+    background: linear-gradient(to bottom right, #ff0000 0%, #66ffff 100%);
+}
+
+.neutral  {
+    background: linear-gradient(to bottom right, #00cc00 0%, #66ffff 100%);
+}
