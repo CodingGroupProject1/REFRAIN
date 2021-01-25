@@ -53,6 +53,7 @@ getMyLocation();
                 console.log("DEEZER DATA: ", data);
             })
         })
+        window.open('https://api.deezer.com/' + happySongs, '_blank')
     });
 
     sadBtn.addEventListener('click', () => {
@@ -78,18 +79,12 @@ getMyLocation();
 
 //search bar
 function searchFunction() {
-    var searchInput = document.querySelector('search-input');
-    console.log(data)
+    var searchInput = document.querySelector('#search-input');
+    var searchBtn = document.querySelector('#searchBtn');
+    console.log(searchInput.vaule)
 
-    fetch(
- 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
-    )
-    .then(function(response) {
-        return response.json();
-      })
-      .then(function(response) {
-        console.log(response.data[0]);
-      });
-
-      window.open(searchInput, '_blank')
+    searchBtn.addEventListener('click', () => {
+        var url = 'https://api.deezer.com/'
+        window.open(url + searchInput.vaule, '_blank')
+    })
 }
