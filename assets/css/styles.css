@@ -5,45 +5,102 @@
 
 
 *::before,
+
+
 *::after {
 
+
 box-sizing: border-box;
+
+
 }
 
- /*  font-family: Gotham Rounded; */
+
+
+
+
+
+
+  /*  font-family: Gotham Rounded; */
+
+
+
+
+
+
 
 body {
+
+
  background: linear-gradient(140deg, #d5eae3, #50caa1);
+
+
  background-size: 400% 400%;
+
+
  -webkit-animation: AnimationName 10s ease infinite;
+
+
  -moz-animation: AnimationName 10s ease infinite;
+
+
  -o-animation: AnimationName 10s ease infinite;
+
+
  animation: AnimationName 10s ease infinite;
+
+
 }
 
 
 @-webkit-keyframes AnimationName {
+
+
  0%{background-position:4% 0%}
+
+
  50%{background-position:97% 100%}
+
+
  100%{background-position:4% 0%}
+
+
 }
 
 
 @-moz-keyframes AnimationName {
+
+
  0%{background-position:4% 0%}
+
+
  50%{background-position:97% 100%}
+
+
  100%{background-position:4% 0%}
+
+
 }
 
 
 @-o-keyframes AnimationName {
+
+
  0%{background-position:4% 0%}
+
+
  50%{background-position:97% 100%}
+
+
  100%{background-position:4% 0%}
+
+
 }
 
 
 @keyframes AnimationName {
+
+
  0%{background-position:4% 0%}
 
 
@@ -454,16 +511,38 @@ span {
 
 
 .sad-list.btn {
+
+
  height: 100px;
+
+
  background: linear-gradient(to bottom right, #3366cc 0%, #66ffff 100%);
+
+
  width: 250px;
+
+
  border: 1px solid gray;
+
+
  flex-direction: row;
+
+
  align-items: center;
+
+
  line-height: 75 px;
+
+
  font-size: 30px;
+
+
  color: black;
+
+
  font-family: 'Potta One';
+
+
  }
 
 
@@ -473,16 +552,38 @@ span {
 
 
 .happy-list.btn{
+
+
  height: 100px;
+
+
  background: linear-gradient(to bottom right, #ffff66 0%, #66ffff 100%);
+
+
  width: 250px;
+
+
  border: 1px solid gray;
+
+
  flex-direction: row;
+
+
  align-items: center;
+
+
  line-height: 75 px;
+
+
  font-size: 30px;
+
+
  color: black; 
+
+
  font-family: 'Potta One';
+
+
 }
 
 
@@ -492,16 +593,43 @@ span {
 
 
 .surprise-list.btn {
+
+
  height: 100px;
+
+
  background: linear-gradient(to bottom right, #ff9900 0%, #66ffff 100%);
+
+
  width: 250px;
+
+
  border: 1px solid gray;
+
+
  flex-direction: row;
+
+
  align-items: center;
+
+
  line-height: 75 px;
+
+
  font-size: 30px;
+
+
  color: black;
+
+
  font-family: 'Potta One';
+
+
+
+
+
+
+
 }
 
 
@@ -548,8 +676,14 @@ span {
 
 
 .btn:hover {
+
+
  border: 2px solid black;
+
+
  box-shadow: 0 0 10px 2px gray;
+
+
 }
 
 
@@ -617,10 +751,22 @@ span {
 
 
 footer {
+
+
  display: flex;
+
+
  justify-content: center;
+
+
  align-items: center;
+
+
  height: 3rem; 
+
+
  font-family: 'Potta One', bold, 12px;
+
+
 }
 
