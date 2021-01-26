@@ -351,4 +351,65 @@ height: 100px;
 }*/
 
 
+/* Modal button*/
+#myBtn {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+ /* width: 700px;
+  height:100%;*/
+  margin: 0 525px;
+  font-family: 'Potta One';
+  line-height: 75px;
+  font-weight: bolder;
+  font-size: 50px;
+  border: 3px solid rgb(186, 164, 248);
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+  border-radius: 5px;
+ padding: 20px 20px; 
+ flex-direction: row;
+ width: 50%;
+ height: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 250px;
+  border: 1px solid #888;
+  width: 80%;
+  background-image: linear-gradient(to bottom, #42a5f5 0%, #ff99cc 100%);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
