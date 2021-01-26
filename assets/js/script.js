@@ -9,7 +9,7 @@ var happyBtn = document.getElementById('happy-play');
 var sadBtn = document.getElementById('sad-play');
 var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
-var modalBtn = document.getElementById("modal-btn");
+// var modalBtn = document.getElementById("modal-btn");
 
 //------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
@@ -88,4 +88,4 @@ function searchFunction() {
         });
     window.open(searchInput, '_blank')
 }
-modalBtn.addEventListener('click', getMyLocation);
+// modalBtn.addEventListener('click', getMyLocation);
