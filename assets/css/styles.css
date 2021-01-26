@@ -70,6 +70,12 @@ header, .logo, .h5 {
  font-family: 'Potta One';
 }
 
+.logo {
+  width: 100px; 
+  height: 100px; 
+  display: block; 
+  text-indent: -9999px;
+}
 h5 {
 color: rgb(72, 38, 117);
 align-items: center;
@@ -156,8 +162,6 @@ padding: 15px 15px;
 #banner {
   text-align: center;
 }
-
-
 
 span {
  display: flex;
