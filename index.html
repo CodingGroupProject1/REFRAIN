@@ -63,6 +63,17 @@
 </head>
 
 <body>
+  <div id=Jumbotron>
+    <!--<h1 id="head-div" class="first-title">REFRAIN</h1> <br>-->
+    <a href="#default" class="logo">Logo</a>
+  
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
   <div class="container">
     <div class="row">
       <!-- Title w/t Slogan and LOGO Nav (if needed) -->
@@ -70,40 +81,44 @@
         <a href="/" class="logo"><img src="RefrainLogo.png" atl="RefRain" width=140 height=150 /> </a> <!--<h1 class="h1">RefRain</h1>-->
     </header>
 
+      
 
-      <div class="header col s12" id="banner"></div>
-      <h1 id="head-div" class="first-title">RefRain</h1>
-      <br>
 
       <div class="welcome col s12"></div>
       <div class="intro">
         <h2>Weather the music!</h2>
-        <h3>Match your mood to the weather <br> and let the music flow!</h3>
     </div>
+      <h5>Welcome to REFRAIN!<br>
+        Match your mood to the weather <br> and let the music flow! </h5>
     </div>
+
+     <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">How do you feel today?</a>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+     <!--<h4>How do you feel today?</h4>
+      <p>A bunch of text</p>-->
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
+    </div>
+
+
+  </div>
 
     <div class="main-box col s12">
       <!--<div id="container" class="contain">
          <h2 id="banner" class="face-up">This Will be the Animation of the User's Mood?</h2>
       </div>-->
     </div>
-    <div class="weather-display col s12" class="weather-display"></div>
-    <!--weather preview  -->     
-            <div id="weather">
-                <section class="banner">
-                    <div class="container">
-                     <h1 id="temperature"></h1>
-                     <h2 id="description"></h2>
-                     <p id="location"></p>
-                    </div>
-                </section>
-            </div>
-    <h2 id="banner" class="face-up">This above Will be the Animation of the Weather outside</h2>
+    <div class="weather-display col-s12"></div>
+    <h2 id="banner" class="face-up">This will be the weather animation.</h2>
   </div>
   </div>
   </div>
-  <div id="head-div2" class="third-title">How does today's weather make you feel? Select a mood and discover what music
-    fits!!</div>
+  <!-- <div id="head-div2" class="third-title">How does today's weather make you feel? Select a mood and discover what music
+    fits!</div> -->
   </div>
   </header>
   <br>
@@ -115,7 +130,7 @@
 
   <!-- <form id="frm1" action="/action_page.php">
       <select id="mySelect">
-        <option>Happy</option>
+        
         <option>Sad</option>
         <option>Fear</option>
         <option>Suprise</option>
@@ -130,30 +145,40 @@
   <!-- This is a span container for the play list. 
   There are 4 Playlist Now Play Sad happy and Suprise-->
 
-
-
+  <!--<div id="playlist-display" class="playlist-display">
+    <h3 id="banner" class="face-up">Here are today's playlists, enjoy!</h3>
+  </div> -->
+  
   <div class="buttons">
     <span id="tracks-container" class="lists">
       <div id="fear-container" class="mood">
         <!-- For Play songs -->
-        <button id="fear-play" class="button fear-list btn">Fear</button>
-
+        <button id="fear-play" class="fear-list btn">Fear</button><br>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8504286762&app_id=1" 
+        width="300" height="300"></iframe>
         <!-- <div Id="fear-play-list" class="fear-list-play songs">Fear songs go Here!</div>-->
       </div>
       <br>
       <div id="sad-container" class="mood">
-        <button id="sad-play" class="button sad-list btn">Sad</button>
+        <button id="sad-play" class="sad-list btn">Sad</button><br>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=11436236&app_id=1" 
+        width="300" height="300"></iframe>
         <!--<div Id="sad-play-list" class="sad-list-play songs">Sad songs go Here!</div>-->
       </div>
       <div id="happy-container" class="mood">
-        <button id="happy-play" class="button happy-list btn">Happy</button>
+        <button id="happy-play" class="happy-list btn">Happy</button><br>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=91549902&app_id=1" 
+        width="300" height="300"></iframe>
         <!--<div Id="happy-play-list" class="happy-list-play songs ">Happy songs go Here!</div>-->
       </div>
       <div id="surprise-container" class="mood">
-        <button id="surprise-play" class="button surprise-list btn">Surprise</button>
+        <button id="surprise-play" class="surprise-list btn">Surprise</button><br>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8613386422&app_id=1" 
+        width="300" height="300"></iframe>
         <!--<div Id="surprise-play-list" class="surprise-list-play songs">Surprise songs go Here!</div>-->
       </div>
   </div>
+  <br>
 
   <div class="search">Search for your artist/song</div>
 
@@ -164,14 +189,12 @@
     <!--<div id="container" class="contain">
          <h2 id="banner" class="face-up">This Will be the Animation of the User's Mood?</h2>
       </div>-->
-    <div id="playlist-display" class="playlist-display">
-      <h2 id="banner" class="face-up">Here's today's playlist! Enjoy!</h2>
-    </div>
+    
   </div>
   </div>
   </span>
   <div class="footer">
-    <footer id="footer" class="foot">Hope you enjoyed RefRain! Thanks for visting!!</footer>
+    <footer id="footer" class="foot">We hope you enjoyed REFRAIN! Thank you for visting!</footer>
 
 
 
