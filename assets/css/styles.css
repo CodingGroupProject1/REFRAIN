@@ -18,7 +18,26 @@ box-sizing: border-box;
   border-radius: 5px;
 }
 
-body {
+.sad {
+  background: linear-gradient(to bottom right, #b288d4 0%, #473bb3 100%);
+}
+
+.happy {
+  background: linear-gradient(to bottom right, #ffff7c 0%, #e0911b 100%);
+}
+
+.surprise {
+  background: linear-gradient(to bottom right, #c1ff7a 0%, #25aa5d 100%);
+}
+
+.angry {
+  background: linear-gradient(to bottom right, #ff8989 0%, #733c8d 100%);
+}
+
+
+body.initial {
+
+
  background: linear-gradient(140deg, #a9defd, #7264c4);
  background-size: 400% 400%;
  -webkit-animation: AnimationName 10s ease infinite;
