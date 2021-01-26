@@ -78,7 +78,6 @@ function searchFunction() {
     var searchInput = document.querySelector('search-input');
     console.log(data)
     fetch(
-<<<<<<< HEAD
             'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
         )
         .then(function (response) {
@@ -88,18 +87,6 @@ function searchFunction() {
             console.log(response.data[0]);
         });
     window.open(searchInput, '_blank')
-}
-modalBtn.addEventListener('click', getMyLocation);
-=======
- 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
-    )
-    .then(function(response) {
-        return response.json();
-      })
-      .then(function(response) {
-        console.log(response.data[0]);
-      });
-      window.open(searchInput, '_blank')
 }
 
 // Get the modal
@@ -112,19 +99,18 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
->>>>>>> develop
