@@ -31,7 +31,7 @@ function getMyLocation() {
         console.log("Geolocation not available on device");
     }
 }
-getMyLocation();
+getMyLocation("Data: ");
 
 //-------- GET SONGS DEPENDING ON BUTTON CLICKED ------
     fearBtn.addEventListener('click', () => {
@@ -73,17 +73,17 @@ getMyLocation();
 
 
 //------ SEARCH SONG -------
-function searchFunction() {
-    var searchInput = document.querySelector('search-input');
-    console.log(data)
-    fetch(
- 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
-    )
-    .then(function(response) {
-        return response.json();
-      })
-      .then(function(response) {
-        console.log(response.data[0]);
-      });
-      window.open(searchInput, '_blank')
-}
+// function searchFunction() {
+//     var searchInput = document.querySelector('search-input');
+//     console.log(data)
+//     fetch(
+//  'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
+//     )
+//     .then(function(response) {
+//         return response.json();
+//       })
+//       .then(function(response) {
+//         console.log(response.data[0]);
+//       });
+//       window.open(searchInput, '_blank')
+// }
