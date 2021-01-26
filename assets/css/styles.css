@@ -48,7 +48,8 @@ body {
  -moz-animation: AnimationName 10s ease infinite;
  -o-animation: AnimationName 10s ease infinite;
  animation: AnimationName 10s ease infinite;
-#Jumbotron {
+}
+#Jumbotron{
 
   border: 2px solid rgb(172, 172, 252);
 
@@ -160,7 +161,7 @@ display: flex;
 h5 {
 
  color: rgb(72, 38, 117);
-
+}
 #intro {
  justify-content: center;
  align-items: center;
