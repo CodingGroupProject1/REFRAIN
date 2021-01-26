@@ -248,6 +248,18 @@ justify-content: space-evenly;
 
 }
 
+/* WEATHER DETAILS */
+.weather {
+  font-size: 2vw;
+  font-weight: bolder;
+  color: #44266b;
+}
+
+.weather-display {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
 #weather-display, #banner{
 
@@ -468,74 +480,6 @@ span {
   margin-left: 10px;
  }
 
-
-/*
-
-
- border-radius: 5px;
-
-
- padding: 15px 10px;
-
-
- box-shadow: aqua;
-
-
- outline: none;
-
-
- display: flex;
-
-
- margin: .25rem;
-
-
- text-align: justify;*/
-
-
-
-
-/*.mood {
-
-
- display: flex;
-
-
- flex-direction: row;
-
-
- width: 100%;
-
-
- margin: .25rem;
-
-}
-
-.songs {
-
-
- display: flex;
-
-
- justify-content: space-around;
-
-
- align-items: center;
-
-
- width: 100%;
-
-
- margin: 0 0 0 0.3rem;
-
-
- color: white;
-
-
- background-color: blueviolet;
-
-
-}*/
 
 
 

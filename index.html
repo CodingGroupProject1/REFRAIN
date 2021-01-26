@@ -29,9 +29,6 @@
 
   <div class="container">
     <div class="row">
-      <!-- Title w/t Slogan and LOGO Nav (if needed) -->
-      
-
 
       <div class="welcome col s12"></div>
       <h5>Welcome to REFRAIN!<br>
@@ -40,12 +37,15 @@
     </div>
 
     <div class="main-box col s12">
-      <!--<div id="container" class="contain">
-         <h2 id="banner" class="face-up">This Will be the Animation of the User's Mood?</h2>
-      </div>-->
+      <div class="weather-display col-s12">
+        <ul>
+          <li id="temp" class="weather"></li>
+          <li id="conditions" class="weather"></li>
+        </ul>
+      </div>
     </div>
-    <div class="weather-display col-s12"></div>
-    <h2 id="banner" class="face-up">This will be the weather animation.</h2>
+
+
   </div>
   </div>
   </div>
@@ -59,24 +59,6 @@
   <br>
 
 
-
-  <!-- <form id="frm1" action="/action_page.php">
-      <select id="mySelect">
-        <option>Happy</option>
-        <option>Sad</option>
-        <option>Fear</option>
-        <option>Suprise</option>
-      </select><br>
-      mood2: <input type="text" name="mood2"><br>
-      <input type="button" value="Submit">
-    </form>
-  -->
-
-  <!-- Banner over the facial Rec Pic and Face Pic underneath -->
-
-  <!-- This is a span container for the play list. 
-  There are 4 Playlist Now Play Sad happy and Suprise-->
-
   <div id="playlist-display" class="playlist-display">
     <h3 id="banner" class="face-up">Here are today's playlists, enjoy!</h3>
   </div>
@@ -86,28 +68,11 @@
       <div id="fear-container" class="mood">
         <!-- For Play songs -->
         <button id="fear-play" class="fear-list btn">Fear</button><br>
-        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8504286762&app_id=1" 
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8504286762&app_id=1" 
         width="300" height="300"></iframe>
         <!-- <div Id="fear-play-list" class="fear-list-play songs">Fear songs go Here!</div>-->
       </div>
-      <div id="sad-container" class="mood">
-        <button id="sad-play" class="sad-list btn">Sad</button><br>
-        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=11436236&app_id=1" 
-        width="300" height="300"></iframe>
-        <!--<div Id="sad-play-list" class="sad-list-play songs">Sad songs go Here!</div>-->
-      </div>
-      <div id="happy-container" class="mood">
-        <button id="happy-play" class="happy-list btn">Happy</button><br>
-        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=91549902&app_id=1" 
-        width="300" height="300"></iframe>
-        <!--<div Id="happy-play-list" class="happy-list-play songs ">Happy songs go Here!</div>-->
-      </div>
-      <div id="surprise-container" class="mood">
-        <button id="surprise-play" class="surprise-list btn">Surprise</button><br>
-        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8613386422&app_id=1" 
-        width="300" height="300"></iframe>
-        <!--<div Id="surprise-play-list" class="surprise-list-play songs">Surprise songs go Here!</div>-->
-      </div>
+
   </div>
   <br>
 
