@@ -1,81 +1,70 @@
 
 *,
 
-
-
-
 *::before,
-
 
 *::after {
 
-
 box-sizing: border-box;
-
 
 }
 
 
-
-
-
-
-
   /*  font-family: Gotham Rounded; */
 
+#Jumbotron {
 
+  border: 2px solid rgb(172, 172, 252);
 
+  text-align: center;
 
+  align-items: center;
+
+  padding: 10px;
+
+  margin: 10px;
+
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+
+  border-radius: 5px;
+}
 
 
 
 body {
 
 
- background: linear-gradient(140deg, #d5eae3, #50caa1);
-
+ background: linear-gradient(140deg, #a9defd, #7264c4);
 
  background-size: 400% 400%;
 
-
  -webkit-animation: AnimationName 10s ease infinite;
-
 
  -moz-animation: AnimationName 10s ease infinite;
 
-
  -o-animation: AnimationName 10s ease infinite;
 
-
  animation: AnimationName 10s ease infinite;
-
 
 }
 
 
 @-webkit-keyframes AnimationName {
 
-
  0%{background-position:4% 0%}
-
 
  50%{background-position:97% 100%}
 
-
  100%{background-position:4% 0%}
-
 
 }
 
 
 @-moz-keyframes AnimationName {
 
-
  0%{background-position:4% 0%}
 
-
  50%{background-position:97% 100%}
-
 
  100%{background-position:4% 0%}
 
@@ -85,12 +74,9 @@ body {
 
 @-o-keyframes AnimationName {
 
-
  0%{background-position:4% 0%}
 
-
  50%{background-position:97% 100%}
-
 
  100%{background-position:4% 0%}
 
@@ -100,12 +86,9 @@ body {
 
 @keyframes AnimationName {
 
-
  0%{background-position:4% 0%}
 
-
  50%{background-position:97% 100%}
-
 
  100%{background-position:4% 0%}
 
@@ -113,75 +96,48 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 header, .logo, .h5 {
 
+ color: rgb(79, 34, 121);
 
  display: flex;
 
-
  justify-content: center;
-
 
  align-items: center;
 
-
  width: 100%;
-
 
  height: 60px; 
 
-
  border: 1px solid none;
-
 
  border-radius: 5px;
 
-
  padding: 15px 10px;
-
 
  font-size: 30px;
 
-
  font-family: 'Potta One';
-
-
-
-
-
 
 }
 
 
 h5 {
 
+ color: rgb(72, 38, 117);
 
  align-items: center;
 
+ text-align: center;
 
 }
 
 
 
-
+#head-div {
+  text-shadow: 2px 2px #9675d3;
+}
 
 
 
@@ -190,12 +146,9 @@ h5 {
 
  display: flex;
 
-
  flex-direction: row;
 
-
  width: 50%;
-
 
  height: 50%;
 
@@ -208,38 +161,18 @@ h5 {
 
  display: flex;
 
-
 justify-content: space-evenly;
-
 
  width: 100%;
 
-
  height: 60%;
 
-
  align-items: center;
-
 
  font-family: 'Potta One';
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .first-title {
@@ -247,81 +180,46 @@ justify-content: space-evenly;
 
  display: flex;
 
-
  justify-content: center;
-
 
  width: 100%;
 
-
  height: 60px; 
-
 
  border: 1px solid none;
 
-
  border-radius: 5px;
-
 
  padding: 15px 10px;
 
-
-
-
-
-
-
 }
-
-
-
-
-
 
 
 .third-title {
 
+ color: rgb(69, 30, 119);
 
  display: flex;
 
-
  justify-content: center;
-
 
  align-items: center;
 
-
  width: 100%;
-
 
  height: 60px; 
 
-
  border: 1px solid none;
-
 
  border-radius: 5px;
 
-
  padding: 15px 10px;
-
 
  font-size: 30px;
 
-
  font-family: 'Potta One';
 
-
-
-
-
-
-
 }
-
-
-
-
 
 
 
@@ -330,123 +228,69 @@ justify-content: space-evenly;
 
  display: flex;
 
-
  justify-content: space-evenly;
-
 
  align-items: center;
 
-
  width: 100%;
-
 
  height: 300px;
 
-
  margin: 1rem;
 
-
- background-color:#36f4f0;
-
+ background-color:#d7b8f3;
 
  border: 1px solid gray;
 
-
  border-radius: 5px;
 
-
  padding: 15px 30px;
-
-
-
-
-
-
 
 }
 
 
-
-
-
-
-
-#banner,#weather-display {
+#weather-display, #banner{
 
 
  display: flex;
 
-
  justify-content: center;
 
-
- align-items: center;
-
+ align-items:center;
 
  width: 100%;
 
-
  height:100%;
 
+ margin: 5px;
 
- margin: 1rem;
+ border: 3px solid rgb(186, 164, 248);
 
-
- border: 1px solid none;
-
+ background: linear-gradient(140deg, #7264c4, #89cff8);
 
  border-radius: 5px;
-
 
  padding: 15px 15px;
 
 
 }
 
-
-
-
-
-
-
-/*#frm1 {
-
-
- display: flex;
-
-
- flex-direction: column;
-
-
- margin-bottom: 1rem;
-
-
-
-
-
-
-}*/
-
-
-
-
+#banner {
+ 
+  text-align: center;
+}
 
 
 
 span {
 
-
  display: flex;
-
 
  flex-direction: row;
 
-
  width: auto;
 
-
  height: 100%;
-
 
  justify-content: center;
 
@@ -454,19 +298,19 @@ span {
 }
 
 
+#playlist-display {
+  margin-right: 140px;
 
+  margin-left: 140px;
 
+  color: #44266b;
 
+  padding: 10px;
 
+  align-items: center;
 
-
-
-
-
-
-
-
-
+  text-align: center;
+}
 
 
 .fear-list.btn {
@@ -474,39 +318,28 @@ span {
 
  height: 100px; 
 
+ background: linear-gradient(to bottom right, #ff8989 0%, #733c8d 100%);
 
- background: linear-gradient(to bottom right, #ff0000 0%, #66ffff 100%);
-
-
- width: 250px;
-
+ width: 300px;
 
  border: 1px solid gray;
 
-
  flex-direction: row;
-
 
  align-items: center;
 
-
  line-height: 75 px;
-
 
  font-size: 30px;
 
-
- color: black;
-
+ color: rgb(107, 35, 35);
 
  font-family: 'Potta One';
 
+ border-radius: 5px;
 
+ margin-right: 3px;
  }
-
-
-
-
 
 
 
@@ -515,39 +348,30 @@ span {
 
  height: 100px;
 
+ background: linear-gradient(to bottom right, #b288d4 0%, #473bb3 100%);
 
- background: linear-gradient(to bottom right, #3366cc 0%, #66ffff 100%);
-
-
- width: 250px;
-
+ width: 300px;
 
  border: 1px solid gray;
 
-
  flex-direction: row;
-
 
  align-items: center;
 
-
  line-height: 75 px;
-
 
  font-size: 30px;
 
-
- color: black;
-
+ color: rgb(66, 43, 124);
 
  font-family: 'Potta One';
 
+ border-radius: 5px;
 
+ margin-left: 3px;
+
+ margin-right: 3px;
  }
-
-
-
-
 
 
 
@@ -556,81 +380,93 @@ span {
 
  height: 100px;
 
+ background: linear-gradient(to bottom right, #ffff7c 0%, #e0911b 100%);
 
- background: linear-gradient(to bottom right, #ffff66 0%, #66ffff 100%);
-
-
- width: 250px;
-
+ width: 300px;
 
  border: 1px solid gray;
 
-
  flex-direction: row;
-
 
  align-items: center;
 
-
  line-height: 75 px;
-
 
  font-size: 30px;
 
-
- color: black; 
-
+ color: rgb(175, 134, 22); 
 
  font-family: 'Potta One';
 
+ border-radius: 5px;
+
+ margin-left: 3px;
+
+ margin-right: 3px;
 
 }
-
-
-
-
-
 
 
 .surprise-list.btn {
 
-
  height: 100px;
 
+ background: linear-gradient(to bottom right, #c1ff7a 0%, #25aa5d 100%);
 
- background: linear-gradient(to bottom right, #ff9900 0%, #66ffff 100%);
-
-
- width: 250px;
-
+ width: 300px;
 
  border: 1px solid gray;
 
-
  flex-direction: row;
-
 
  align-items: center;
 
-
  line-height: 75 px;
-
 
  font-size: 30px;
 
-
- color: black;
-
+ color: rgb(46, 128, 73);
 
  font-family: 'Potta One';
 
+ border-radius: 5px;
 
-
-
-
-
+ margin-left: 3px;
 
 }
+
+.btn:hover {
+
+  border: 2px solid rgb(170, 140, 255);
+ 
+  box-shadow: 0 0 10px 2px rgb(110, 56, 160);
+ 
+ }
+
+
+ footer {
+
+
+  display: flex;
+ 
+  justify-content: center;
+ 
+  align-items: center;
+ 
+  height: 3rem; 
+ 
+  font-family: 'Potta One', bold, 12px;
+
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+ 
+  border: 2px solid rgb(212, 181, 253);
+
+  border-radius: 3px;
+
+  margin-right:10px;
+
+  margin-left: 10px;
+ }
 
 
 /*
@@ -651,43 +487,10 @@ span {
  display: flex;
 
 
-
-
-
-
-
-
-
-
  margin: .25rem;
 
 
  text-align: justify;*/
-
-
-
-
-
-
-
-
-
-
-
-
-.btn:hover {
-
-
- border: 2px solid black;
-
-
- box-shadow: 0 0 10px 2px gray;
-
-
-}
-
-
-
 
 
 
@@ -706,17 +509,7 @@ span {
 
  margin: .25rem;
 
-
-
-
-
-
 }
-
-
-
-
-
 
 .songs {
 
@@ -745,28 +538,4 @@ span {
 }*/
 
 
-
-
-
-
-
-footer {
-
-
- display: flex;
-
-
- justify-content: center;
-
-
- align-items: center;
-
-
- height: 3rem; 
-
-
- font-family: 'Potta One', bold, 12px;
-
-
-}
 
