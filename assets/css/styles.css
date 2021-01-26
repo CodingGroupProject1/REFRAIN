@@ -12,7 +12,7 @@ box-sizing: border-box;
   border: 2px solid rgb(172, 172, 252);
   text-align: center;
   align-items: center;
-  padding: 10px;
+  padding:10px 10px;
   margin: 10px;
   background: linear-gradient(140deg, #7264c4, #89cff8);
   border-radius: 5px;
@@ -70,12 +70,12 @@ header, .logo, .h5 {
  font-family: 'Potta One';
 }
 
-.logo {
+/*.logo {
   width: 100px; 
   height: 100px; 
   display: block; 
   text-indent: -9999px;
-}
+}*/
 h5 {
 color: rgb(72, 38, 117);
 align-items: center;
