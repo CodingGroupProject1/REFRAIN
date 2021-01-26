@@ -1,3 +1,4 @@
+
 //-------- PLAYLISTS ----------
 var happySongs = 'playlist/1479458365';
 var sadSongs = 'playlist/1911334042';
@@ -94,3 +95,4 @@ getMyLocation();
 //       });
 //       window.open(searchInput, '_blank')
 // }
+

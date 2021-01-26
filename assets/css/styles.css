@@ -12,7 +12,44 @@ box-sizing: border-box;
 
   /*  font-family: Gotham Rounded; */
 
-#Jumbotron {
+ /* .logo {
+    position: absolute;
+    width: 10px; 
+    top: 10px; 
+     display: block;
+    z-index: inherit;
+    text-align: left;
+  } */
+
+  .logo {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 3px 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  }
+
+  .search {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    color: #AAA;
+    padding: 20px;
+    margin: 50px auto 0px auto;
+    width: 77%;
+  }
+  
+body {
+ background: linear-gradient(140deg, #d5eae3, #50caa1);
+ background-size: 400% 400%;
+ -webkit-animation: AnimationName 10s ease infinite;
+ -moz-animation: AnimationName 10s ease infinite;
+ -o-animation: AnimationName 10s ease infinite;
+ animation: AnimationName 10s ease infinite;
+}
+#Jumbotron{
 
   border: 2px solid rgb(172, 172, 252);
 
@@ -48,7 +85,6 @@ body {
 
 }
 
-
 @-webkit-keyframes AnimationName {
 
  0%{background-position:4% 0%}
@@ -59,7 +95,6 @@ body {
 
 }
 
-
 @-moz-keyframes AnimationName {
 
  0%{background-position:4% 0%}
@@ -67,8 +102,6 @@ body {
  50%{background-position:97% 100%}
 
  100%{background-position:4% 0%}
-
-
 }
 
 
@@ -79,8 +112,6 @@ body {
  50%{background-position:97% 100%}
 
  100%{background-position:4% 0%}
-
-
 }
 
 
@@ -91,8 +122,6 @@ body {
  50%{background-position:97% 100%}
 
  100%{background-position:4% 0%}
-
-
 }
 
 
@@ -122,11 +151,19 @@ header, .logo, .h5 {
 
 }
 
+/*.h1 {
+justify-items: center;
+align-items: center;
+padding:0 500px ;
+display: flex;
+}*/
 
 h5 {
 
  color: rgb(72, 38, 117);
-
+}
+#intro {
+ justify-content: center;
  align-items: center;
 
  text-align: center;
@@ -176,8 +213,6 @@ justify-content: space-evenly;
 
 
 .first-title {
-
-
  display: flex;
 
  justify-content: center;
@@ -326,8 +361,6 @@ span {
 
 
 .fear-list.btn {
-
-
  height: 100px; 
 
  background: linear-gradient(to bottom right, #ff8989 0%, #733c8d 100%);
