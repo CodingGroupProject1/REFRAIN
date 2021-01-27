@@ -2,6 +2,7 @@
 const apiURL = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/user/4164456382/playlists';
 
 //---------- DISPLAY WEATHER ---------
+var cityName = document.querySelector("#location");
 var weatherIcon = document.querySelector("#icon");
 var temp = document.querySelector("#temp");
 var conditions = document.querySelector("#cloud");
@@ -14,6 +15,7 @@ var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
 var btns = document.querySelectorAll('.mood button');
 
+
 //------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
     if(navigator.geolocation)
@@ -22,14 +24,15 @@ function getMyLocation() {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         fetch(
-            'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
+            'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
         .then(function (response) {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
-                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
-                temp.textContent = Math.floor((data.current.temp - 32) * 5/ 9) +" °C";
-                conditions.textContent = data.current.weather[0].description;
+                cityName.textContent = data.name;
+                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png';
+                temp.textContent = Math.floor((data.main.temp - 32) * 5/ 9) +" °C";
+                conditions.textContent = data.weather[0].description
 
             })
         })
@@ -64,8 +67,8 @@ const loadIframe = (type, response) => {
     iframe.setAttribute('scrolling', 'no');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowTransparency', 'true');
-    iframe.setAttribute('width', '700');
-    iframe.setAttribute('height', '350');
+    iframe.setAttribute('width', '800');
+    iframe.setAttribute('height', '450');
 
 
     console.log({iframe, track});
@@ -101,16 +104,17 @@ function searchFunction() {
     var searchInput = document.querySelector('search-input');
     console.log(data)
     fetch(
- 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=' + searchInput
+ 'https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/playlist?q=' + searchInput + '&strict=on'
     )
     .then(function(response) {
         return response.json();
       })
       .then(function(response) {
-        console.log(response.data[0]);
+        console.log(response.data.data[0]);
       });
       window.open(searchInput, '_blank')
 }
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -137,3 +141,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
