@@ -23,61 +23,41 @@
 <body class="initial">
 
   <div id=Jumbotron>
-    <h1 id="head-div" class="first-title">REFRAIN</h1> <br>
-    <a href="/" id="logo"><img src="RefrainLogo.png" atl="refrain" /> </a>
-    <!--<h1>RefRain</h1>-->
-
+    <img class="logo" src="RefrainLogo.png" atl="refrain" />
+    <h1 id="head-div" class="first-title">REFRAIN</h1>
+ 
   </div>
 
   <div class="container">
-    <div class="row">
-      <!-- Title w/t Slogan and LOGO Nav (if needed) -->
 
-
-
-      <div class="welcome col s12"></div>
-      <h5>Welcome to REFRAIN!<br>
-        Match your mood to today's weather and let the music flow!</h5>
-    </div>
-
-    <div class="main-box col s12">
-      <!--<div id="container" class="contain">
-         <h2 id="banner" class="face-up">This Will be the Animation of the User's Mood?</h2>
-      </div>-->
-    </div>
-    <div class="weather-display col-s12"></div>
-    <!-- Modal Structure -->
-    <!-- Modal Trigger -->
-    <button id="modal-btn" data-target="modal1" class="btn modal-trigger">Let's start off with a look at how you're
-      feeling!! </button>
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+    <div class="weather-display col-s12">
+      <div>
+        <img id="icon">
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-      </div>
+      
+        <p id="temp" class="weather-details"></p>
+        <p id="cloud" class="weather-details"></p>
     </div>
+    
   </div>
   </div>
   </div>
 
-  <!--</div>
-  <div id="head-div2" class="third-title">How do you feel today?</div>
-  </div>-->
-  </header>
+
+
+
+  <div id="iframe-container" class="iframe-container"></div>
   <br>
   <br>
   <br>
   <br>
 
   <!-- Trigger/Open The Modal -->
-  <button id="myBtn">How do you feel today?</button>
+  <button id="myBtn" class="myBtn">Click here Match your mood to today's weather and let the music flow!</button>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
-
+  
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -87,30 +67,21 @@
             <div id="fear-container" class="mood">
               <!-- For Play songs -->
               <button id="fear-play" class="fear-list btn">Fear</button><br>
-              <iframe scrolling="no" frameborder="0" allowTransparency="true"
-                src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8504286762&app_id=1"
-                width="300" height="300"></iframe>
+
               <!-- <div Id="fear-play-list" class="fear-list-play songs">Fear songs go Here!</div>-->
             </div>
             <div id="sad-container" class="mood">
               <button id="sad-play" class="sad-list btn">Sad</button><br>
-              <iframe scrolling="no" frameborder="0" allowTransparency="true"
-                src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=11436236&app_id=1"
-                width="300" height="300"></iframe>
+
               <!--<div Id="sad-play-list" class="sad-list-play songs">Sad songs go Here!</div>-->
             </div>
             <div id="happy-container" class="mood">
               <button id="happy-play" class="happy-list btn">Happy</button><br>
-              <iframe scrolling="no" frameborder="0" allowTransparency="true"
-                src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=album&id=91549902&app_id=1"
-                width="300" height="300"></iframe>
               <!--<div Id="happy-play-list" class="happy-list-play songs ">Happy songs go Here!</div>-->
             </div>
             <div id="surprise-container" class="mood">
               <button id="surprise-play" class="surprise-list btn">Surprise</button><br>
-              <iframe scrolling="no" frameborder="0" allowTransparency="true"
-                src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=8613386422&app_id=1"
-                width="300" height="300"></iframe>
+
               <!--<div Id="surprise-play-list" class="surprise-list-play songs">Surprise songs go Here!</div>-->
             </div>
         </div>
@@ -119,25 +90,25 @@
 
 
 
-    <!-- This is a span container for the play list. 
+  <!-- This is a span container for the play list. 
   There are 4 Playlist Now Play Sad happy and Suprise-->
 
-    <div id="playlist-display" class="playlist-display">
-      <h3 id="banner" class="face-up">Enjoy today's playlist!</h3>
-    </div>
+  <div id="playlist-display" class="playlist-display">
+    <h3 id="banner" class="face-up">Enjoy today's playlist!</h3>
+  </div>
+  
+
+  <br>
 
 
-    <br>
+  </span>
 
-
-    </span>
-
-    <div class="playlist-box">
-      <!--<div id="container" class="contain">
+  <div class="playlist-box">
+    <!--<div id="container" class="contain">
          <h2 id="banner" class="face-up">This Will be the Animation of the User's Mood?</h2>
       </div>-->
-
-    </div>
+    
+  </div>
   </div>
   </span>
   <div class="footer">

@@ -1,3 +1,11 @@
+//-------- CONFIG ----------
+const apiURL = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/user/4164456382/playlists';
+
+//---------- DISPLAY WEATHER ---------
+var weatherIcon = document.querySelector("#icon");
+var temp = document.querySelector("#temp");
+var conditions = document.querySelector("#cloud");
+
 //-------- PLAYLISTS ----------
 var happySongs = 'playlist/1479458365';
 var sadSongs = 'playlist/1911334042';
@@ -9,7 +17,7 @@ var happyBtn = document.getElementById('happy-play');
 var sadBtn = document.getElementById('sad-play');
 var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
-var modalBtn = document.getElementById("modal-btn");
+var btns = document.querySelectorAll('.mood button');
 
 //------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
@@ -24,6 +32,10 @@ function getMyLocation() {
                     response.json()
                         .then(function (data) {
                             console.log("Weather data: ", data);
+                            weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
+                            temp.textContent = Math.floor((data.current.temp - 32) * 5 / 9) + " °C";
+                            conditions.textContent = data.current.weather[0].description;
+
                         })
                 })
             console.log("Coordinates: ", lat, lon);
@@ -32,46 +44,67 @@ function getMyLocation() {
         console.log("Geolocation not available on device");
     }
 }
-getMyLocation();
+getMyLocation("Data: ");
+
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+
+const loadIframe = (type, response) => {
+    const {
+        data
+    } = response;
+    console.log("DEEZER DATA: ", data, type);
+
+    // Find data.title equal to type
+    const track = data.find(track => track.title === type);
+
+    // Get id
+    const {
+        id
+    } = track;
+
+    console.log({
+        track,
+        id
+    })
+
+    // Generates new source
+    const src = getIframeSrc(id);
+
+    // Get iframe and sets source
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', src);
+
+
+    console.log({
+        iframe,
+        track
+    })
+
+    // Show iframe after removing previous elements
+    const container = document.querySelector('#iframe-container');
+    container.childNodes[0] ? .remove();
+    container.appendChild(iframe);
+}
 
 //-------- GET SONGS DEPENDING ON BUTTON CLICKED ------
-fearBtn.addEventListener('click', () => {
-    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + fearSongs)
-        .then(function (response) {
-            response.json()
-                .then(function (data) {
-                    console.log("DEEZER DATA: ", data);
-                })
-        })
-});
-happyBtn.addEventListener('click', () => {
-    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + happySongs)
-        .then(function (response) {
-            response.json()
-                .then(function (data) {
-                    console.log("DEEZER DATA: ", data);
-                })
-        })
-});
-sadBtn.addEventListener('click', () => {
-    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + sadSongs)
-        .then(function (response) {
-            response.json()
-                .then(function (data) {
-                    console.log("DEEZER DATA: ", data);
-                })
-        })
-});
-surpriseBtn.addEventListener('click', () => {
-    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + surpriseSongs)
-        .then(function (response) {
-            response.json()
-                .then(function (data) {
-                    console.log("DEEZER DATA: ", data);
-                })
-        })
-});
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const buttonId = btn.id.replace('-play', '');
 
+        const types = {
+            fear: 'Fearful',
+            sad: 'Sad',
+            happy: 'Happy',
+            surprise: 'Surprise'
+        };
+        const type = types[buttonId];
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(response => loadIframe(type, response))
+        // .then(loadIframe.bind(type))
+    })
+})
 
 //------ SEARCH SONG -------
 function searchFunction() {
