@@ -6,11 +6,6 @@ var weatherIcon = document.querySelector("#icon");
 var temp = document.querySelector("#temp");
 var conditions = document.querySelector("#cloud");
 
-//-------- PLAYLISTS ----------
-var happySongs = 'playlist/1479458365';
-var sadSongs = 'playlist/1911334042';
-var fearSongs = 'playlist/8646459442';
-var surpriseSongs = 'playlist/8651277862';
 
 //--------- BUTTONS -----------------
 var happyBtn = document.getElementById('happy-play');
@@ -46,7 +41,7 @@ function getMyLocation() {
 }
 getMyLocation("Data: ");
 
-const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
 
 const loadIframe = (type, response) => {
     const { data } = response;
@@ -58,7 +53,7 @@ const loadIframe = (type, response) => {
     // Get id
     const { id } = track;
     
-    console.log({ track, id })
+    console.log({ track, id });
 
     // Generates new source
     const src = getIframeSrc(id);
@@ -66,10 +61,15 @@ const loadIframe = (type, response) => {
     // Get iframe and sets source
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', src);
+    iframe.setAttribute('scrolling', 'no');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowTransparency', 'true');
+    iframe.setAttribute('width', '700');
+    iframe.setAttribute('height', '350');
 
 
-    console.log({iframe, track})
-
+    console.log({iframe, track});
+    
     // Show iframe after removing previous elements
     const container = document.querySelector('#iframe-container');
     container.childNodes[0]?.remove();
@@ -80,6 +80,7 @@ const loadIframe = (type, response) => {
     btns.forEach(btn => {
         btn.addEventListener('click', () => {
             const buttonId = btn.id.replace('-play', '');
+            modal.style.display = "none";
 
             const types = {
                 fear: 'Fearful',
@@ -92,7 +93,6 @@ const loadIframe = (type, response) => {
             fetch(apiURL)
                 .then(response => response.json())
                 .then(response => loadIframe(type, response))
-                // .then(loadIframe.bind(type))
         })
     })
 
