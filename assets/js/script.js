@@ -2,6 +2,7 @@
 const apiURL = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/user/4164456382/playlists';
 
 //---------- DISPLAY WEATHER ---------
+var cityName = document.querySelector("#location");
 var weatherIcon = document.querySelector("#icon");
 var temp = document.querySelector("#temp");
 var conditions = document.querySelector("#cloud");
@@ -32,10 +33,10 @@ function getMyLocation() {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
+
                 weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
                 temp.textContent = Math.floor((data.current.temp - 32) * 5/ 9) +" °C";
                 conditions.textContent = data.current.weather[0].description;
-
             })
         })
         console.log("Coordinates: ", lat, lon);
@@ -66,10 +67,15 @@ const loadIframe = (type, response) => {
     // Get iframe and sets source
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', src);
+    iframe.setAttribute('scrolling', 'no');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowTransparency', 'true');
+    iframe.setAttribute('width', '800');
+    iframe.setAttribute('height', '450');
 
 
-    console.log({iframe, track})
-
+    console.log({iframe, track});
+ 
     // Show iframe after removing previous elements
     const container = document.querySelector('#iframe-container');
     container.childNodes[0]?.remove();
@@ -80,7 +86,7 @@ const loadIframe = (type, response) => {
     btns.forEach(btn => {
         btn.addEventListener('click', () => {
             const buttonId = btn.id.replace('-play', '');
-
+            modal.style.display = "none";
             const types = {
                 fear: 'Fearful',
                 sad: 'Sad',
@@ -95,6 +101,22 @@ const loadIframe = (type, response) => {
                 // .then(loadIframe.bind(type))
         })
     })
+
+//------ SEARCH SONG -------
+function searchFunction() {
+    var searchInput = document.querySelector('search-input');
+    console.log(data)
+    fetch(
+ 'https://cors-anywhere.herokuapp.com/http://api.deezer.com/search/playlist?q=' + searchInput + '&strict=on'
+    )
+    .then(function(response) {
+        return response.json();
+      })
+      .then(function(response) {
+        console.log(response.data.data[0]);
+      });
+      window.open(searchInput, '_blank')
+}
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -130,4 +152,3 @@ function searchArtist() {
     var win = window.open(inputUrl, '_blank')
     win.focus
 }
-
