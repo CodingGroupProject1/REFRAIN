@@ -7,6 +7,11 @@ var weatherIcon = document.querySelector("#icon");
 var temp = document.querySelector("#temp");
 var conditions = document.querySelector("#cloud");
 
+//-------- PLAYLISTS ----------
+var happySongs = 'playlist/1479458365';
+var sadSongs = 'playlist/1911334042';
+var fearSongs = 'playlist/8646459442';
+var surpriseSongs = 'playlist/8651277862';
 
 //--------- BUTTONS -----------------
 var happyBtn = document.getElementById('happy-play');
@@ -14,7 +19,6 @@ var sadBtn = document.getElementById('sad-play');
 var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
 var btns = document.querySelectorAll('.mood button');
-
 
 //------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
@@ -24,16 +28,15 @@ function getMyLocation() {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         fetch(
-            'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
+            'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
         .then(function (response) {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
-                cityName.textContent = data.name;
-                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png';
-                temp.textContent = Math.floor((data.main.temp - 32) * 5/ 9) +" °C";
-                conditions.textContent = data.weather[0].description
 
+                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
+                temp.textContent = Math.floor((data.current.temp - 32) * 5/ 9) +" °C";
+                conditions.textContent = data.current.weather[0].description;
             })
         })
         console.log("Coordinates: ", lat, lon);
@@ -44,7 +47,7 @@ function getMyLocation() {
 }
 getMyLocation("Data: ");
 
-const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
 
 const loadIframe = (type, response) => {
     const { data } = response;
@@ -56,7 +59,7 @@ const loadIframe = (type, response) => {
     // Get id
     const { id } = track;
     
-    console.log({ track, id });
+    console.log({ track, id })
 
     // Generates new source
     const src = getIframeSrc(id);
@@ -72,7 +75,7 @@ const loadIframe = (type, response) => {
 
 
     console.log({iframe, track});
-    
+ 
     // Show iframe after removing previous elements
     const container = document.querySelector('#iframe-container');
     container.childNodes[0]?.remove();
@@ -84,7 +87,6 @@ const loadIframe = (type, response) => {
         btn.addEventListener('click', () => {
             const buttonId = btn.id.replace('-play', '');
             modal.style.display = "none";
-
             const types = {
                 fear: 'Fearful',
                 sad: 'Sad',
@@ -96,6 +98,7 @@ const loadIframe = (type, response) => {
             fetch(apiURL)
                 .then(response => response.json())
                 .then(response => loadIframe(type, response))
+                // .then(loadIframe.bind(type))
         })
     })
 
@@ -114,7 +117,6 @@ function searchFunction() {
       });
       window.open(searchInput, '_blank')
 }
-
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -142,3 +144,11 @@ window.onclick = function(event) {
   }
 }
 
+//------ SEARCH SONG -------
+function searchArtist() {
+    var textInput = document.querySelector('#input').value;
+    const url = 'https://www.deezer.com/search/'
+    var inputUrl = url + textInput
+    var win = window.open(inputUrl, '_blank')
+    win.focus
+}

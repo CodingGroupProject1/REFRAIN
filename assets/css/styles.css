@@ -92,7 +92,6 @@ header, .h5 {
  font-family: 'Potta One';
 }
 
-
 h5 {
 color: rgb(72, 38, 117);
 align-items: center;
@@ -131,10 +130,26 @@ justify-content: space-evenly;
 .first-title {
  display: flex;
  justify-content: center;
+ width: 100%;
+ height: 60px; 
  border: 1px solid none;
  border-radius: 5px;
  padding: 15px 10px;
- margin-top: 0;
+}
+
+
+.third-title {
+ color: rgb(69, 30, 119);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 60px; 
+ border: 1px solid none;
+ border-radius: 5px;
+ padding: 15px 10px;
+ font-size: 30px;
+ font-family: 'Potta One';
 }
 
 
@@ -157,8 +172,6 @@ display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 50px;
 }
 
 .weather-details {
@@ -276,7 +289,7 @@ height: 100px;
   justify-content: center;
   align-items: center;
   height: 3rem; 
-  font-family: 'Potta One', bold, 12px;
+  font-family: 'Potta One', bolder, 12px;
  background: linear-gradient(140deg, #7264c4, #89cff8);
   border: 2px solid rgb(212, 181, 253);
  border-radius: 3px;
@@ -289,7 +302,6 @@ height: 100px;
   display: flex;
   justify-content: center;
   margin-top: 25px;
-  width: 100%;
 }
 
 
@@ -360,6 +372,41 @@ height: 100px;
   cursor: pointer;
 }
 
+/* Search bar */
+#input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    background: linear-gradient(140deg, #7264c4, #89cff8);
+    border: 3px solid rgb(186, 164, 248);
+    border-radius: 5px;
+}
+
+.submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 30%;
+    background: linear-gradient(140deg, #7264c4, #89cff8);
+    border: 3px solid rgb(186, 164, 248);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bolder;
+    font-family: 'Potta One';
+    margin-top: 5px;
+}
+
+.submitBtn:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
 @media screen and (max-width: 768px) {
   .first-title {
     font-size: 3vw;
