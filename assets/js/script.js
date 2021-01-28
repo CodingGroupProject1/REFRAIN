@@ -1,28 +1,41 @@
-var lat;
-var lon;
+//-------- CONFIG ----------
+const apiURL = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/user/4164456382/playlists';
 
+//---------- DISPLAY WEATHER ---------
+var weatherIcon = document.querySelector("#icon");
+var temp = document.querySelector("#temp");
+var conditions = document.querySelector("#cloud");
+
+//-------- PLAYLISTS ----------
 var happySongs = 'playlist/1479458365';
 var sadSongs = 'playlist/1911334042';
 var fearSongs = 'playlist/8646459442';
 var surpriseSongs = 'playlist/8651277862';
 
+//--------- BUTTONS -----------------
 var happyBtn = document.getElementById('happy-play');
 var sadBtn = document.getElementById('sad-play');
 var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
+var btns = document.querySelectorAll('.mood button');
 
+//------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
     if(navigator.geolocation)
     navigator.geolocation.getCurrentPosition(function(position){
         console.log(position);
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
         fetch(
             'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
         .then(function (response) {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
+                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
+                temp.textContent = Math.floor((data.current.temp - 32) * 5/ 9) +" °C";
+                conditions.textContent = data.current.weather[0].description;
+
             })
         })
         console.log("Coordinates: ", lat, lon);
@@ -31,60 +44,90 @@ function getMyLocation() {
         console.log("Geolocation not available on device");
     }
 }
-getMyLocation();
-//get songs depending on button clicked
+getMyLocation("Data: ");
+
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+
+const loadIframe = (type, response) => {
+    const { data } = response;
+    console.log("DEEZER DATA: ", data, type);
+
+    // Find data.title equal to type
+    const track = data.find(track => track.title === type);
+    
+    // Get id
+    const { id } = track;
+    
+    console.log({ track, id })
+
+    // Generates new source
+    const src = getIframeSrc(id);
+
+    // Get iframe and sets source
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', src);
 
 
-    fearBtn.addEventListener('click', () => {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + fearSongs)
-        .then(function (response) {
-            response.json()
-            .then(function (data){
-                console.log("DEEZER DATA: ", data);
-            })
-        })
-    });
+    console.log({iframe, track})
 
-    happyBtn.addEventListener('click', () => {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + happySongs)
-        .then(function (response) {
-            response.json()
-            .then(function (data){
-                console.log("DEEZER DATA: ", data);
-            })
-        })
-        window.open('https://api.deezer.com/' + happySongs, '_blank')
-    });
-
-    sadBtn.addEventListener('click', () => {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + sadSongs)
-        .then(function (response) {
-            response.json()
-            .then(function (data){
-                console.log("DEEZER DATA: ", data);
-            })
-        })
-    });
-
-    surpriseBtn.addEventListener('click', () => {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/' + surpriseSongs)
-        .then(function (response) {
-            response.json()
-            .then(function (data){
-                console.log("DEEZER DATA: ", data);
-            })
-        })
-    });
-
-
-//search bar
-function searchFunction() {
-    var searchInput = document.querySelector('#search-input');
-    var searchBtn = document.querySelector('#searchBtn');
-    console.log(searchInput.vaule)
-
-    searchBtn.addEventListener('click', () => {
-        var url = 'https://api.deezer.com/'
-        window.open(url + searchInput.vaule, '_blank')
-    })
+    // Show iframe after removing previous elements
+    const container = document.querySelector('#iframe-container');
+    container.childNodes[0]?.remove();
+    container.appendChild(iframe);
 }
+
+//-------- GET SONGS DEPENDING ON BUTTON CLICKED ------
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const buttonId = btn.id.replace('-play', '');
+
+            const types = {
+                fear: 'Fearful',
+                sad: 'Sad',
+                happy: 'Happy',
+                surprise: 'Surprise'
+            };
+            const type = types[buttonId];
+
+            fetch(apiURL)
+                .then(response => response.json())
+                .then(response => loadIframe(type, response))
+                // .then(loadIframe.bind(type))
+        })
+    })
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+//------ SEARCH SONG -------
+function searchArtist() {
+    var textInput = document.querySelector('#input').value;
+    const url = 'https://www.deezer.com/search/'
+    var inputUrl = url + textInput
+    var win = window.open(inputUrl, '_blank')
+    win.focus
+}
+
