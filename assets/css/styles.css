@@ -406,3 +406,9 @@ height: 100px;
     font-family: 'Potta One';
     margin-top: 5px;
 }
+
+.submitBtn:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
