@@ -360,35 +360,6 @@ height: 100px;
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .first-title {
-    font-size: 3vw;
-   }
-
-   .logo {
-    height: 75px;
-    width: 80px;
-    margin-bottom: 0;
-  }
-
-  .myBtn {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin: auto;
-    font-family: 'Potta One';
-    line-height: 1.5;
-    font-weight: bolder;
-    font-size: 2.7vw;
-    border: 3px solid rgb(186, 164, 248);
-    background: linear-gradient(140deg, #7264c4, #89cff8);
-    border-radius: 5px;
-    padding: 20px 20px; 
-    flex-direction: row;
-    width: 70%;
-    height: 20%;
-  }
-}
 
 .main-container {
   min-height: 100vh;
@@ -474,3 +445,32 @@ hr {
 
 }
 
+@media screen and (max-width: 768px) {
+  .first-title {
+    font-size: 3vw;
+   }
+
+   .logo {
+    height: 75px;
+    width: 80px;
+    margin-bottom: 0;
+  }
+
+  .myBtn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+    font-family: 'Potta One';
+    line-height: 1.5;
+    font-weight: bolder;
+    font-size: 2.7vw;
+    border: 3px solid rgb(186, 164, 248);
+    background: linear-gradient(140deg, #7264c4, #89cff8);
+    border-radius: 5px;
+    padding: 20px 20px; 
+    flex-direction: row;
+    width: 70%;
+    height: 20%;
+  }
+}
