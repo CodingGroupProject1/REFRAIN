@@ -83,11 +83,30 @@ function createEntry() {
         deleteBtn.textContent = "Delete Entry";
         entryContainer.appendChild(deleteBtn);
 
-
+        deleteBtn.addEventListener("click", function(event){
+            removeEntry(event);
+        });
     }
 }
 
+var removeEntry = function(event) {
+    var targetEl = event.target;
+   
+    var entryId = targetEl.getAttribute("data-entry-id");
+    deleteEntry(entryId);
+   var  localEntries = localStorage.getItem("journalEntries");
+   localEntries = JSON.parse(localEntries);
+   localEntries.splice(entryId,1);
+   localEntries = JSON.stringify(localEntries);
+   localStorage.setItem("journalEntries", localEntries);
+   createEntry();
+  
+}
 
+var deleteEntry = function(entryId) {
+    var selectedEntry = document.querySelector("div[data-entry-id='" + entryId + "']");
+    selectedEntry.remove();
+}
 
 createEntry();
 
