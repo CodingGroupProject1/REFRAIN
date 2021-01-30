@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <title>RefRain</title>
+
+</head>
+<body>
+    <section>
+        <h2 class="page-title">How was your day?</h2>
+        <form id="journal-form">
+            <div class="day-details">
+                <input type="text" name="mood" id="mood" placeholder="What's your mood today?">
+                <textarea name="day-description" id="day-description" cols="30" rows="10" placeholder="Briefly tell us about your day!"></textarea>
+            </div>
+
+            <div class="checkin-form">
+                <button class="btn" id="save-entry" type="submit">Save</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="journal" class="journal-format">
+        <!--APPEND TITLE AND ENTRY-->
+    </section>
+
+    <script src="./assets/js/journal.js"></script>
+</body>
+</html>
