@@ -447,15 +447,16 @@ hr {
 
 .journal-format {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  column-gap: 10px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 3rem;
   justify-content: space-around;
+  margin: auto;
+  width: 80%;
 }
 
 .entry {
   margin-top: 50px;
-  margin-bottom: 80px;
   padding: 0 15px;
 }
 
