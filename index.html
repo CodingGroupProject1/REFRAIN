@@ -27,97 +27,117 @@
 
   <div id=Jumbotron>
     <img class="logo" src="RefrainLogo.png" atl="refrain" />
-    <h1 id="head-div" class="first-title">REFRAIN</h1>
- 
+    <h1 id="head-div" class="firrainst-title">REFRAIN</h1>
+    <h2 class="define">The name RefRain is a play on words blending music and weather. Refrain refers to the chorus of a
+      song and just happens to contain the word rain! </h2>
+
   </div>
-<main class = main-container>
-  <div class="container">
-    <div class="weather-display col-s12">
-      <h2 id="location" class="city-name"></h2>
-      <div>
-        <img id="icon">
-      </div>
+  <main class=main-container>
+    <div class="container">
+      <div class="weather-display col-s12">
+        <h2 id="location" class="city-name"></h2>
+        <div>
+          <img id="icon">
+        </div>
         <p id="temp" class="weather-details"></p>
         <p id="cloud" class="weather-details"></p>
-    </div>
-  </div>
-
-  <!-- iframe music player -->
-  <div id="iframe-container" class="iframe-container"></div>
-
-
-  <!-- Trigger/Open The Modal -->
-  <button id="myBtn" class="myBtn">Click here Match your mood to today's weather and let the music flow!</button>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-  
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>
-        <div class="buttons">
-          <span id="tracks-container" class="lists">
-            <div id="fear-container" class="mood">
-            <!-- For Play songs -->
-              <button id="fear-play" class="fear-list btn">Fear</button><br>
-            </div>
-            <div id="sad-container" class="mood">
-              <button id="sad-play" class="sad-list btn">Sad</button><br>
-            </div>
-            <div id="happy-container" class="mood">
-              <button id="happy-play" class="happy-list btn">Happy</button><br>
-            </div>
-            <div id="surprise-container" class="mood">
-              <button id="surprise-play" class="surprise-list btn">Surprise</button><br>
-            </div>
-        </div>
-      </p>
-    </div>
-
-    <div id="playlist-display" class="playlist-display">
-      <h3 id="banner" class="face-up">Enjoy today's playlist!</h3>
-    </div>
-  </div>
-<div class="cards">
-  <div class="card-container">
-    <div class="infocard">
-      <div class="card-front">What is Seasonal Affective Disorder (SAD)?</div>
-      <div class="card-back">
-        <div class="text-info">
-          <p>SAD is more than just “winter blues.” The symptoms can be distressing and overwhelming and can interfere with daily functioning. However, it can be treated. About 5 percent of adults in the U.S. experience SAD and it typically lasts about 40 percent of the year. It is more common among women than men.</p>
-          <a href="https://www.psychiatry.org/patients-families/depression/seasonal-affective-disorder" target="_blank">Click here to learn more!</a>
-        </div>
       </div>
     </div>
-</div>
+
+    <!-- iframe music player -->
+    <div id="iframe-container" class="iframe-container"></div>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="myBtn">Click here Match your mood to today's weather and let the music flow!</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          <div class="buttons">
+            <span id="tracks-container" class="lists">
+              <div id="fear-container" class="mood">
+                <!-- For Play songs -->
+                <button id="fear-play" class="fear-list btn">Fear</button><br>
+              </div>
+              <div id="sad-container" class="mood">
+                <button id="sad-play" class="sad-list btn">Sad</button><br>
+              </div>
+              <div id="happy-container" class="mood">
+                <button id="happy-play" class="happy-list btn">Happy</button><br>
+              </div>
+              <div id="surprise-container" class="mood">
+                <button id="surprise-play" class="surprise-list btn">Surprise</button><br>
+              </div>
+          </div>
+        </p>
+      </div>
 
 
-<section class="health-services">
-    <div>
-      <h2>Mental Health Services</h2>
-      <hr>
-    <ul>
-      <a href="https://toronto.cmha.ca/mental-health-2/find-help/mental-health-resources/" target="_blank"><li> Canadian Mental Health Association</li></a>
-      <a href="https://www.mindbeacon.com/tgp-getstarted" target="_blank"><li>Mind Beacon</li></a>
-      <a href="https://www.torontocentralhealthline.ca/listservices.aspx?id=10237" target="_blank"><li>Toronto Central Healthline</li></a>
-    </ul>     
+      <div id="playlist-display" class="playlist-display">
+        <h3 id="banner" class="face-up">Enjoy today's playlist!</h3>
+      </div>
     </div>
- </div>
-</section>
 
-<div>
-  <a href="checkin.html">Journal</a>
-</div>
+    <div class="submit-form">
+      <form>
+        <input type="text" value="" placeholder="Enter Artist" id="input">
+        <button type="submit" id="SubmitBtn" onclick="searchArtist()">Submit</button>
+      </form>
+    </div>
 
-  <!--FOOTER-->
-  <div class="footer">
-    <footer id="footer" class="foot">We hope you enjoyed REFRAIN! Thank you for visting!</footer>
-  </div>
- 
-</main>
+    <div class="cards">
+      <div class="card-container">
+        <div class="infocard">
+          <div class="card-front">What is Seasonal Affective Disorder (SAD)?</div>
+          <div class="card-back">
+            <div class="text-info">
+              <p>SAD is more than just “winter blues.” The symptoms can be distressing and overwhelming and can
+                interfere with daily functioning. However, it can be treated. About 5 percent of adults in the U.S.
+                experience SAD and it typically lasts about 40 percent of the year. It is more common among women than
+                men.</p>
+              <a href="https://www.psychiatry.org/patients-families/depression/seasonal-affective-disorder"
+                target="_blank">Click here to learn more!</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="./assets/js/script.js"></script>
+
+      <section class="health-services">
+        <div>
+          <h2>Mental Health Services</h2>
+          <hr>
+          <ul>
+            <a href="https://toronto.cmha.ca/mental-health-2/find-help/mental-health-resources/" target="_blank">
+              <li> Canadian Mental Health Association</li>
+            </a>
+            <a href="https://www.mindbeacon.com/tgp-getstarted" target="_blank">
+              <li>Mind Beacon</li>
+            </a>
+            <a href="https://www.torontocentralhealthline.ca/listservices.aspx?id=10237" target="_blank">
+              <li>Toronto Central Healthline</li>
+            </a>
+          </ul>
+        </div>
+    </div>
+    </section>
+
+    <div>
+      <a href="journal.html">Journal</a>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+      <footer id="footer" class="foot">We hope you enjoyed REFRAIN! Thank you for visting!</footer>
+    </div>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
 
 </body>
 
