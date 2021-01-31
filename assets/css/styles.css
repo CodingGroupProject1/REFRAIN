@@ -8,6 +8,7 @@
 }
   /*  font-family: Gotham Rounded; */
 
+
   /* JUMBOTRON */
 #jumbotron {
   display: flex;
@@ -195,6 +196,8 @@ span {
 }
 
 .about {
+  margin: auto;
+  width: 80%;
   text-align: center;
 }
 
@@ -204,6 +207,11 @@ span {
 
 .about p {
   font-size: 21px;
+}
+
+.about a {
+  text-decoration: underline;
+  font-size: 1.5vw;
 }
 
 
@@ -380,7 +388,7 @@ span {
   flex-direction: column;
   justify-content: center;
   border: none;
-  background-image: linear-gradient(to bottom, rgba(155, 155, 155, 0.3) 0%, rgba(153, 153, 153, 0.7) 75%, #7e7e7e 100%), url("../../phone-690091_1920.jpg");
+  background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.575) 0%, rgba(102, 102, 102, 0.7) 75%, #7e7e7e 100%), url("../../phone-690091_1920.jpg");
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -391,21 +399,27 @@ span {
 }
 
 .health-services h2 {
-  margin-bottom: 65px;
+  margin-bottom: 150px;
   font-size: 5.0vw; 
   text-align: center;
 }
 
 .health-services ul {
   text-align: center;
-  margin-bottom: 215px;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.281);
 }
 
 .health-services ul li {
   font-size: 1.6vw;
   font-weight: bold;
-  line-height: 2;
-  
+  line-height: 2.5;
+}
+
+.health-services a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(252, 248, 248);
 }
 
 .text-info p{
@@ -414,11 +428,11 @@ span {
   padding: 5px;
 }
 
-a {
-  color: rgb(5, 5, 5);
-}
+
 
 footer {
+  position: sticky;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
