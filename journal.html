@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
 
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets\css\styles.css" />
-  <link rel="stylesheet" href="assets\css\journal.css" />
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\journal.css" />
 
-  <title>RefRain</title>
+    <title>RefRain</title>
 
 </head>
+
 <body>
+    <!-- NAV BAR -->
     <div class="navBar">
         <h1>REFRAIN</h1>
         <ul class="index">
-      
-            <li class="indexLi"><span class="material-icons">home</span><a class="listA">Home</a></li>
+            <li class="indexLi"><span class="material-icons">home</span><a class="listA" href="index.html">Home</a></li>
             <li class="indexLi"><span class="material-icons">feed</span><a class="listA">News</a></li>
             <li class="indexLi"><span class="material-icons">alternate_email</span><a class="listA">Contact</a></li>
             <li class="indexLi"><span class="material-icons">help_center</span><a class="listA">About</a></li>
             <li class="indexLi"><span class="material-icons">book</span><a class="listA">Journal</a></li>
-          </ul>
-        </div>
-    <section>
-        
-        <h2 class="page-title">How was your day?</h2>
-        <div class="journalBody">
-        <form id="journal-form">
-            <div class="day-details">
-                <input type="text" name="mood" id="mood" placeholder="What's your mood today?">
-                <textarea name="day-description" id="day-description" cols="30" rows="10" placeholder="Briefly tell us about your day!"></textarea>
-            </div>
-
-            <div class="journal-submit">
-                <button class="btn" id="save-entry" type="submit">Save<span class="material-icons">save</span></button>
-            </div>
-        </form>
+        </ul>
     </div>
-    </section>
 
-    <section id="journal" class="journal-format">
-        <!--APPEND TITLE AND ENTRY-->
-    </section>
 
+    <div class="background-img">
+        <!-- JOURNAL ENTRY SECTION -->
+        <section class="journal-entry">
+            <h2 class="page-title">How was your day?</h2>
+
+            <form id="journal-form" class="journal-form">
+                <div class="day-details">
+                    <input type="text" name="mood" id="mood" class="mood-input" placeholder="What's your mood today?">
+                    <textarea class="description" name="day-description" id="day-description" cols="30" rows="10"
+                        placeholder="Briefly tell us about your day!"></textarea>
+                </div>
+
+                <div class="journal-submit">
+                    <button class="btn" id="save-entry" type="submit"><span
+                            class="material-icons">create</span></button>
+                </div>
+            </form>
+
+        </section>
+
+        <section id="journal" class="journal-format">
+            <!--APPEND TITLE AND ENTRY-->
+        </section>
+    </div>
+    <div class="footer">
+        <footer id="footer" class="foot">We hope you enjoyed REFRAIN. Thank you for visting!</footer>
+      </div>
     <script src="./assets/js/journal.js"></script>
 </body>
+
 </html>

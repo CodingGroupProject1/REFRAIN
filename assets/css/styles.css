@@ -8,7 +8,8 @@
 }
   /*  font-family: Gotham Rounded; */
 
-#Jumbotron {
+  /* JUMBOTRON */
+#jumbotron {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,7 +31,7 @@
   font-size: 1.5vw;
 }
 
-.jumboText, p{
+.jumboText p{
   text-align: center;
   padding: 10px;
 }
@@ -53,6 +54,7 @@
 
 .material-icons {
   display: flex;
+  align-items: center;
 }
 
 .navBar {
@@ -87,38 +89,6 @@ h1 {
  align-items: center;
 }
 
-
-
-
- 
-
-
-@-webkit-keyframes AnimationName {
-  0%{background-position:4% 0%}
-  50%{background-position:97% 100%}
-  100%{background-position:4% 0%}
-}
-
-
-@-moz-keyframes AnimationName {
-  0%{background-position:4% 0%}
-  50%{background-position:97% 100%}
-  100%{background-position:4% 0%}
-}
-
-
-@-o-keyframes AnimationName {
-  0%{background-position:4% 0%}
-  50%{background-position:97% 100%}
-  100%{background-position:4% 0%}
-}
-
-
-@keyframes AnimationName {
-  0%{background-position:4% 0%}
-  50%{background-position:97% 100%}
-  100%{background-position:4% 0%}
-}
 
 
 header, .h5 {
@@ -172,7 +142,6 @@ h5 {
 }
 
 
-
 #container {
   display: flex;
   justify-content: space-evenly;
@@ -186,8 +155,6 @@ h5 {
   padding: 15px 30px;
   
 }
-
-
 
 .weather-display{
   display: flex;
@@ -310,15 +277,6 @@ span {
   box-shadow: 0 0 10px 2px rgb(56, 37, 73);
  }
 
- footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem; 
-  background: rgb(143, 155, 185);
-  position: relative;
-  margin-top: 125px;
- }
 
 .iframe-container {
   display: flex;
@@ -398,35 +356,6 @@ span {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .first-title {
-    font-size: 3vw;
-   }
-
-   .logo {
-    height: 75px;
-    width: 80px;
-    margin-bottom: 0;
-  }
-
-  .myBtn {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin: auto;
-    line-height: 1.5;
-    font-weight: bolder;
-    font-size: 2.7vw;
-    border: 3px solid rgb(186, 164, 248);
-    background: linear-gradient(140deg, #7264c4, #a9defd);
-    border-radius: 5px;
-    padding: 20px 20px; 
-    flex-direction: row;
-    width: 70%;
-    height: 20%;
-    margin-top: 0;
-  }
-}
 
 .main-container {
   min-height: 100vh;
@@ -458,7 +387,7 @@ span {
   background-position: center;
   min-height: 41rem;
   width: 75%;
-  margin: 175px auto 0 auto;
+  margin: 175px auto 125px auto;
 }
 
 .health-services h2 {
@@ -487,4 +416,98 @@ span {
 
 a {
   color: rgb(5, 5, 5);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem; 
+  background: rgb(143, 155, 185);
+  position: relative;
+  /* margin-top: 125px; */
+ }
+
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(143, 155, 185);
+  }
+
+  .navBar h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .index {
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+  }
+
+  
+  .jumboText{
+    position: absolute;
+    left: 100px; 
+    top: 200px;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 70vw;
+    height: 50vh;
+    font-size: 1.5vw;
+  }
+
+  .jumboText h3 {
+    font-size: 5vw;
+  }
+  
+  .jumboText p{
+    text-align: center;
+    padding: 10px;
+    font-size: 3vw;
+  }
+  
+  
+  .first-title {
+    font-size: 3vw;
+   }
+
+  .myBtn {
+    font-family: 'Tenor Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+    line-height: 75px;
+    font-size: 2.7vw;
+    padding: 20px 20px; 
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 218, 218);
+  }
+
+  .health-services h2 {
+    font-size: 5vw;
+  }
+  
+  .health-services ul li {
+    font-size: 3.4vw;
+    font-weight: bolder;
+    line-height: 2;
+    
+  }
+
+  .weatherContainer {
+    position: absolute;
+    bottom: -10px; 
+    right: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 300px;
+    height: 410px;
+  }
+
 }
