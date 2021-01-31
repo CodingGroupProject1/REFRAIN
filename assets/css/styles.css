@@ -1,12 +1,13 @@
-
+  
 *,
 
 *::before,
 *::after {
 
-box-sizing: border-box;
+  box-sizing: border-box;
 }
-  /*  font-family: Gotham Rounded; */
+
+/*  font-family: Gotham Rounded; */
 
 #Jumbotron {
   display: flex;
@@ -15,7 +16,7 @@ box-sizing: border-box;
   border: 2px solid rgb(172, 172, 252);
   text-align: center;
   align-items: center;
-  padding:10px 10px;
+  padding: 10px 10px;
   margin: 10px;
   background: linear-gradient(140deg, #7264c4, #89cff8);
   border-radius: 5px;
@@ -41,63 +42,95 @@ box-sizing: border-box;
 body.initial {
 
 
- background: linear-gradient(140deg, #a9defd, #7264c4);
- background-size: 400% 400%;
- -webkit-animation: AnimationName 10s ease infinite;
- -moz-animation: AnimationName 10s ease infinite;
- -o-animation: AnimationName 10s ease infinite;
- animation: AnimationName 10s ease infinite;
+  background: linear-gradient(140deg, #b3a6fa, #b2def8, rgb(169, 236, 186));
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  -o-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
 }
 
 
 @-webkit-keyframes AnimationName {
- 0%{background-position:4% 0%}
- 50%{background-position:97% 100%}
- 100%{background-position:4% 0%}
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
 }
 
 
 @-moz-keyframes AnimationName {
- 0%{background-position:4% 0%}
- 50%{background-position:97% 100%}
- 100%{background-position:4% 0%}
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
 }
 
 
 @-o-keyframes AnimationName {
- 0%{background-position:4% 0%}
- 50%{background-position:97% 100%}
- 100%{background-position:4% 0%}
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
 }
 
 
 @keyframes AnimationName {
- 0%{background-position:4% 0%}
- 50%{background-position:97% 100%}
- 100%{background-position:4% 0%}
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
 }
 
 
-header, .h5 {
- color: rgb(79, 34, 121);
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100%;
- height: 60px; 
- border: 1px solid none;
- border-radius: 5px;
- padding: 15px 10px;
- font-size: 30px;
- font-family: 'Potta One';
+header,
+.h5 {
+  color: rgb(79, 34, 121);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border: 1px solid none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 30px;
+  font-family: 'Potta One';
 }
-
 
 h5 {
-color: rgb(72, 38, 117);
-align-items: center;
- text-align: center;
-font-size: 2vw;
+  color: rgb(72, 38, 117);
+  align-items: center;
+  text-align: center;
+  font-size: 2vw;
 }
 
 .logo {
@@ -111,54 +144,68 @@ font-size: 2vw;
 }
 
 #main-box {
- display: flex;
- flex-direction: row;
- width: 50%;
- height: 50%;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
 }
 
 
 #playlist-box {
- display: flex;
-justify-content: space-evenly;
- width: 100%;
- height: 60%;
- align-items: center;
- font-family: 'Potta One';
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+  align-items: center;
+  font-family: 'Potta One';
 }
 
 
 .first-title {
- display: flex;
- justify-content: center;
- border: 1px solid none;
- border-radius: 5px;
- padding: 15px 10px;
- margin-top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  border: 1px solid none;
+  border-radius: 5px;
+  padding: 15px 10px;
+}
+
+
+.third-title {
+  color: rgb(69, 30, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border: 1px solid none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 30px;
+  font-family: 'Potta One';
 }
 
 
 
 #container {
-display: flex;
- justify-content: space-evenly;
- align-items: center;
- width: 100%;
- height: 300px;
- margin: 1rem;
- background-color:#d7b8f3;
- border: 1px solid gray;
- border-radius: 5px;
- padding: 15px 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin: 1rem;
+  background-color: #d7b8f3;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 15px 30px;
 }
 
-.weather-display{
+.weather-display {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 50px;
 }
 
 .weather-details {
@@ -168,17 +215,18 @@ display: flex;
   margin: 0;
 }
 
-#weather-display, #banner{
- display: flex;
- justify-content: center;
- align-items:center;
- width: 100%;
- height:100%;
- margin: 5px;
- border: 3px solid rgb(186, 164, 248);
- background: linear-gradient(140deg, #7264c4, #89cff8);
- border-radius: 5px;
-padding: 15px 15px;
+#weather-display,
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  border: 3px solid rgb(186, 164, 248);
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+  border-radius: 5px;
+  padding: 15px 15px;
 }
 
 #banner {
@@ -186,11 +234,11 @@ padding: 15px 15px;
 }
 
 span {
- display: flex;
- flex-direction: row;
- width: auto;
- height: 100%;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 100%;
+  justify-content: center;
 }
 
 
@@ -205,91 +253,90 @@ justify-content: center;
 
 
 .fear-list.btn {
- height: 100px; 
- background: linear-gradient(to bottom right, #ff8989 0%, #733c8d 100%);
- width: 300px;
- border: 1px solid gray;
- flex-direction: row;
- align-items: center;
- line-height: 75 px;
- font-size: 30px;
- color: rgb(107, 35, 35);
- font-family: 'Potta One';
- border-radius: 5px;
- margin-right: 3px;
- }
+  height: 100px;
+  background: linear-gradient(to bottom right, #ff8989 0%, #733c8d 100%);
+  width: 300px;
+  border: 1px solid gray;
+  flex-direction: row;
+  align-items: center;
+  line-height: 75 px;
+  font-size: 30px;
+  color: rgb(107, 35, 35);
+  font-family: 'Potta One';
+  border-radius: 5px;
+  margin-right: 3px;
+}
 
 .sad-list.btn {
-height: 100px;
-background: linear-gradient(to bottom right, #b288d4 0%, #473bb3 100%);
- width: 300px;
- border: 1px solid gray;
- flex-direction: row;
- align-items: center;
- line-height: 75 px;
- font-size: 30px;
- color: rgb(66, 43, 124);
- font-family: 'Potta One';
- border-radius: 5px;
- margin-left: 3px;
- margin-right: 3px;
- }
+  height: 100px;
+  background: linear-gradient(to bottom right, #b288d4 0%, #473bb3 100%);
+  width: 300px;
+  border: 1px solid gray;
+  flex-direction: row;
+  align-items: center;
+  line-height: 75 px;
+  font-size: 30px;
+  color: rgb(66, 43, 124);
+  font-family: 'Potta One';
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
 
-.happy-list.btn{
-height: 100px;
- background: linear-gradient(to bottom right, #ffff7c 0%, #e0911b 100%);
- width: 300px;
- border: 1px solid gray;
- flex-direction: row;
- align-items: center;
- line-height: 75 px;
- font-size: 30px;
- color: rgb(175, 134, 22); 
- font-family: 'Potta One';
- border-radius: 5px;
- margin-left: 3px;
- margin-right: 3px;
+.happy-list.btn {
+  height: 100px;
+  background: linear-gradient(to bottom right, #ffff7c 0%, #e0911b 100%);
+  width: 300px;
+  border: 1px solid gray;
+  flex-direction: row;
+  align-items: center;
+  line-height: 75 px;
+  font-size: 30px;
+  color: rgb(175, 134, 22);
+  font-family: 'Potta One';
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .surprise-list.btn {
- height: 100px;
- background: linear-gradient(to bottom right, #c1ff7a 0%, #25aa5d 100%);
- width: 300px;
- border: 1px solid gray;
- flex-direction: row;
- align-items: center;
- line-height: 75 px;
- font-size: 30px;
- color: rgb(46, 128, 73);
- font-family: 'Potta One';
- border-radius: 5px;
- margin-left: 3px;
+  height: 100px;
+  background: linear-gradient(to bottom right, #c1ff7a 0%, #25aa5d 100%);
+  width: 300px;
+  border: 1px solid gray;
+  flex-direction: row;
+  align-items: center;
+  line-height: 75 px;
+  font-size: 30px;
+  color: rgb(46, 128, 73);
+  font-family: 'Potta One';
+  border-radius: 5px;
+  margin-left: 3px;
 }
 
 .btn:hover {
   border: 2px solid rgb(170, 140, 255);
   box-shadow: 0 0 10px 2px rgb(110, 56, 160);
- }
+}
 
- footer {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem; 
-  font-family: 'Potta One', bold, 12px;
- background: linear-gradient(140deg, #7264c4, #89cff8);
+  height: 3rem;
+  font-family: 'Potta One', bolder, 12px;
+  background: linear-gradient(140deg, #7264c4, #89cff8);
   border: 2px solid rgb(212, 181, 253);
- border-radius: 3px;
- margin-right:10px;
- margin-left: 10px;
- margin-top: 50px;
- }
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px;
+}
 
 .iframe-container {
   display: flex;
   justify-content: center;
   margin-top: 25px;
-  width: 100%;
 }
 
 
@@ -297,7 +344,7 @@ height: 100px;
 .myBtn {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   margin: auto;
   font-family: 'Potta One';
   line-height: 75px;
@@ -306,10 +353,10 @@ height: 100px;
   border: 3px solid rgb(186, 164, 248);
   background: linear-gradient(140deg, #7264c4, #89cff8);
   border-radius: 5px;
- padding: 20px 20px; 
- flex-direction: row;
- width: 50%;
- height: 50%;
+  padding: 20px 20px;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
 }
 
 .myBtn:hover {
@@ -321,18 +368,27 @@ height: 100px;
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+
 }
 
 /* Modal Content */
@@ -360,6 +416,45 @@ height: 100px;
   cursor: pointer;
 }
 
+/* Search bar */
+#input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+  border: 3px solid rgb(186, 164, 248);
+  border-radius: 5px;
+}
+
+.submit-form {
+  text-align: center;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 30%;
+  background: linear-gradient(140deg, #7264c4, #89cff8);
+  border: 3px solid rgb(186, 164, 248);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bolder;
+  font-family: 'Potta One';
+  margin-top: 5px;
+}
+
+.submitBtn:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 .main-container {
   min-height: 100vh;
@@ -380,15 +475,19 @@ height: 100px;
   justify-content: center;
 }
 
-.health-services, h2 {
+.health-services,
+h2 {
   margin-bottom: 2px;
 }
 
-.health-services, ul {
+.health-services,
+ul {
   text-align: center;
 }
 
-.health-services, ul, li {
+.health-services,
+ul,
+li {
   font-size: 1.2vw;
   font-weight: bold;
   line-height: 2;
@@ -431,26 +530,42 @@ hr {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background:rgb(156, 139, 204);
+  background: rgb(156, 139, 204);
   color: white;
   font-size: 1.2vw;
   transform: rotateY(180deg);
   text-align: center;
 }
 
-.card-back, a {
+.card-back,
+a {
   color: #473bb3;
   text-decoration: none;
   font-weight: bold;
 
 }
 
+.journal-format {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: space-around;
+  margin: auto;
+  width: 80%;
+}
+
+.entry {
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
 @media screen and (max-width: 768px) {
   .first-title {
     font-size: 3vw;
-   }
+  }
 
-   .logo {
+  .logo {
     height: 75px;
     width: 80px;
     margin-bottom: 0;
@@ -459,7 +574,7 @@ hr {
   .myBtn {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin: auto;
     font-family: 'Potta One';
     line-height: 1.5;
@@ -468,7 +583,7 @@ hr {
     border: 3px solid rgb(186, 164, 248);
     background: linear-gradient(140deg, #7264c4, #89cff8);
     border-radius: 5px;
-    padding: 20px 20px; 
+    padding: 20px 20px;
     flex-direction: row;
     width: 70%;
     height: 20%;

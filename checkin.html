@@ -3,58 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="" />
-
   <title>RefRain</title>
-
 </head>
 <body>
-    <header>
+    <section>
         <h2 class="page-title">How was your day?</h2>
-        <form id="task-form">
-            <div class="form-group">
-                <select name="task-type" class="select-dropdown">
-                    <option value="" disabled selected>Choose a word to describe your day</option>
-                    <option value="Amazing">Amazing</option>
-                    <option value="Exciting">Exciting</option>
-                    <option value="Great">Great</option>
-                    <option value="Fine">Fine</option>
-                    <option value="NotGreat">Not so great</option>
-                    <option value="Sad">Sad</option>
-                    <option value="Stressful">Fine</option>
-                    <option value="Depressing">Depressing</option>
-                </select>
-            </div>
-
-            <div class="form-group">
+        <form id="journal-form">
+            <div class="day-details">
+                <input type="text" name="mood" id="mood" placeholder="What's your mood today?">
                 <textarea name="day-description" id="day-description" cols="30" rows="10" placeholder="Briefly tell us about your day!"></textarea>
             </div>
-
-            <div class="form-group">
-                <button class="btn" id="save-input" type="submit">Save</button>
+            <div class="checkin-form">
+                <button class="btn" id="save-entry" type="submit">Save</button>
             </div>
         </form>
-    </header>
-
-    <section>
-        <div id="check-in">
-            <h3>Today was: Amazing</h3>
-            <p>Today I got free stuff</p>
-        </div>
     </section>
-
-    <script src="./assets/js/script.js"></script>
+    <section id="journal">
+        <div></div>
+        <div id="entry-details"></div>
+    </section>
+    <script src="./assets/js/journal.js"></script>
 </body>
 </html>
