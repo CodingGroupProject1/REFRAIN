@@ -12,7 +12,7 @@
   /* JUMBOTRON */
 #jumbotron {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -25,11 +25,13 @@
 .jumboText{
   position: absolute;
   left: 100px; 
-  top: 200px;
+  top: 140px;
   background-color: rgba(255, 255, 255, 0.6);
   width: 700px;
-  height: 500px;
-  font-size: 1.5vw;
+  height: 600px;
+  font-size: 1.3vw;
+  justify-content: center;
+  display: inline;
 }
 
 .jumboText p{
@@ -38,12 +40,14 @@
 }
 
 .weatherContainer {
-  position: absolute;
+  position: ;
+  top: 140 px;
   bottom: -10px; 
   right: 35px;
   background-color: rgba(255, 255, 255, 0.3);
   width: 300px;
   height: 410px;
+  box-sizing: inherit;
 }
 
 #logo img{
@@ -158,10 +162,12 @@ h5 {
 }
 
 .weather-display{
-  display: flex;
+  top: 140px;
+  display: absolute;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  height: 50%;
 }
 
 .weather-details {
