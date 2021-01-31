@@ -47,7 +47,7 @@ function getMyLocation() {
 }
 getMyLocation("Data: ");
 
-const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
 
 const loadIframe = (type, response) => {
     const { data } = response;
@@ -70,7 +70,7 @@ const loadIframe = (type, response) => {
     iframe.setAttribute('scrolling', 'no');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowTransparency', 'true');
-    iframe.setAttribute('width', '300');
+    iframe.setAttribute('width', '800');
     iframe.setAttribute('height', '450');
 
 
