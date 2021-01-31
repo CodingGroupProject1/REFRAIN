@@ -84,7 +84,6 @@ function createEntry() {
 
         var entryContainer = document.createElement("div")
         entryContainer.className = "entry";
-        entryContainer.style.backgroundColor = "red"
         entryContainer.setAttribute("data-entry-id", i);
         journal.appendChild(entryContainer);
 
