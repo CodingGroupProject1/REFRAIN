@@ -11,9 +11,10 @@ Github, Visual studios code editor, (or other code editor software)
 * HTML
 * Materialize CSS 
 * Javascript
+
 ## Contributing
-*Brad Spurrell
-*Johann Taylor
-*Kristen Groller
-*Sam Brown
-*Thomas Kyle
+* Brad Spurrell
+* Johann Taylor
+* Kristen Groller
+* Sam Brown
+* Thomas Kyle
