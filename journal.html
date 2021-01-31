@@ -12,17 +12,32 @@
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="assets\css\styles.css" />
+  <link rel="stylesheet" href="assets\css\journal.css" />
 
   <title>RefRain</title>
 
 </head>
 <body>
+    <div class="navBar">
+        <h1>REFRAIN</h1>
+        <ul class="index">
+      
+            <li class="indexLi"><span class="material-icons">home</span><a class="listA">Home</a></li>
+            <li class="indexLi"><span class="material-icons">feed</span><a class="listA">News</a></li>
+            <li class="indexLi"><span class="material-icons">alternate_email</span><a class="listA">Contact</a></li>
+            <li class="indexLi"><span class="material-icons">help_center</span><a class="listA">About</a></li>
+            <li class="indexLi"><span class="material-icons">book</span><a class="listA">Journal</a></li>
+          </ul>
+        </div>
     <section>
+        
         <h2 class="page-title">How was your day?</h2>
+        <div class="journalBody">
         <form id="journal-form">
             <div class="day-details">
                 <input type="text" name="mood" id="mood" placeholder="What's your mood today?">
@@ -30,9 +45,10 @@
             </div>
 
             <div class="journal-submit">
-                <button class="btn" id="save-entry" type="submit">Save</button>
+                <button class="btn" id="save-entry" type="submit">Save<span class="material-icons">save</span></button>
             </div>
         </form>
+    </div>
     </section>
 
     <section id="journal" class="journal-format">

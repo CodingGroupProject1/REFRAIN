@@ -70,7 +70,7 @@ const loadIframe = (type, response) => {
     iframe.setAttribute('scrolling', 'no');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowTransparency', 'true');
-    iframe.setAttribute('width', '800');
+    iframe.setAttribute('width', '300');
     iframe.setAttribute('height', '450');
 
 
