@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\journal.css" />
+
+    <title>RefRain</title>
+
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <div class="navBar">
+        <h1>REFRAIN</h1>
+        <ul class="index">
+            <li class="indexLi"><a class="listA" href="index.html"><span class="material-icons">home</span>Home</a></li>
+            <li class="indexLi"><span class="material-icons">feed</span><a class="listA">News</a></li>
+            <li class="indexLi"><span class="material-icons">alternate_email</span><a class="listA">Contact</a></li>
+            <li class="indexLi"><span class="material-icons">help_center</span><a class="listA">About</a></li>
+            <li class="indexLi"><a class="listA"><span class="material-icons">book</span>Journal</a></li>
+        </ul>
+    </div>
+
+    <!-- The Modal -->
+    <div id="empty-entry" class="modal">
+        <!-- Modal content -->
+        <div class="warning-content">
+          <span class="close">&times;</span>
+          <p>
+            Please tell us about your day!
+          </p>
+        </div>
+      </div>
+
+    <div class="background-img">
+        <!-- JOURNAL ENTRY SECTION -->
+        <section class="journal-entry">
+            <h2 class="page-title">How was your day?</h2>
+
+            <form id="journal-form" class="journal-form">
+                <div class="day-details">
+                    <textarea type="text" name="mood" id="mood" class="mood-input" placeholder="What's your mood today?"></textarea>
+                    <textarea class="description" name="day-description" id="day-description" cols="30" rows="10"
+                        placeholder="Briefly tell us about your day!"></textarea>
+                </div>
+
+                <div class="journal-submit">
+                    <button class="btn" id="save-entry" type="submit"><span
+                            class="material-icons">create</span></button>
+                </div>
+            </form>
+
+        </section>
+
+        <section id="journal" class="journal-format">
+            <!--APPEND TITLE AND ENTRY-->
+        </section>
+    </div>
+    <div class="footer">
+        <footer id="footer" class="foot">We hope you enjoyed REFRAIN. Thank you for visting!</footer>
+      </div>
+    <script src="./assets/js/journal.js"></script>
+</body>
+
+</html>

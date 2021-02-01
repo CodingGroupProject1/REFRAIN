@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Modal Content */
+.warning-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 15%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgb(138, 190, 164);
+    width: 20%;
+    margin: 15px auto 5px auto;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.background-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../../forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.journal-entry {
+    margin: 50px auto 80px auto;
+    background-color: rgb(138, 190, 164);
+    padding: 15px 35px;
+    border-radius: 16px;
+    width: 50%;
+}
+
+.journal-entry h2 {
+    margin-bottom: 10px;
+    font-size: 2.6vw;
+}
+
+
+.day-details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.journal-form {
+    margin: auto;
+    width: 100%;
+}
+
+.mood-input {
+    resize: none;
+    height: 6.5vh;
+}
+
+.description {
+    height: 215px;
+}
+
+.mood-input,
+.description {
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgb(238, 235, 243);
+    border: 2px solid;
+    width: auto;
+}
+
+/* MOOD INPUT PLACEHOLDER STYLING */
+.mood-input::-webkit-input-placeholder {
+    font-weight: bolder;
+    color: #a19595;
+    font-size: 1vw;
+}
+
+.mood-input::-moz-placeholder {
+    font-weight: bolder;
+    color: #a19595;
+    font-size: 1vw;
+}
+
+.mood-input:-ms-input-placeholder {
+    font-weight: bolder;
+    color: #a19595;
+    font-size: 1vw;
+}
+
+.mood-input::-ms-input-placeholder {
+    font-weight: bolder;
+    color: #a19595;
+    font-size: 1vw;
+}
+
+.mood-input::placeholder {
+    font-weight: bolder;
+    color: #a19595;
+    font-size: 1vw;
+}
+
+/* DESCRIPTION PLACEHOLDER STYLING */
+.description::-webkit-input-placeholder {
+    font-weight: light;
+    color: #a19595;
+    font-size: 1.2vw;
+}
+
+.description::-moz-placeholder {
+    font-weight: light;
+    color: #a19595;
+    font-size: 1.2vw;
+}
+
+.description:-ms-input-placeholder {
+    font-weight: light;
+    color: #a19595;
+    font-size: 1.2vw;
+}
+
+.description::-ms-input-placeholder {
+    font-weight: light;
+    color: #a19595;
+    font-size: 1.2vw;
+}
+
+.description::placeholder {
+    font-weight: light;
+    color: #a19595;
+    font-size: 1.2vw;
+}
+
+
+.btn {
+    width: 50px;
+    height: 40px;
+
+}
+
+.journal-submit {
+    display: flex;
+    justify-content: center;
+}
+
+/* SUBMITTED JOURNAL ENTRIES */
+.entry {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    line-height: 2;
+    margin: 0 auto 25px auto;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgb(236, 226, 238);
+    border: 2px solid;
+}
+
+.current-date {
+    text-align: center;
+    border-bottom: 2px solid #c0b4b4;
+}
+
+.entry h3 {
+    font-size: 2.8vw;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.entry p {
+    font-size: 2vw;
+    margin-bottom: 20px;
+}
+
+.entry button {
+    width: 70px;
+    height: 50px;
+    margin: auto;
+}

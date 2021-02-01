@@ -7,6 +7,11 @@ var weatherIcon = document.querySelector("#icon");
 var temp = document.querySelector("#temp");
 var conditions = document.querySelector("#cloud");
 
+//-------- PLAYLISTS ----------
+var happySongs = 'playlist/1479458365';
+var sadSongs = 'playlist/1911334042';
+var fearSongs = 'playlist/8646459442';
+var surpriseSongs = 'playlist/8651277862';
 
 //--------- BUTTONS -----------------
 var happyBtn = document.getElementById('happy-play');
@@ -14,7 +19,6 @@ var sadBtn = document.getElementById('sad-play');
 var fearBtn = document.getElementById('fear-play')
 var surpriseBtn = document.getElementById('surprise-play');
 var btns = document.querySelectorAll('.mood button');
-
 
 //------------ GET CURRENT WEATHER FOR CURRENT LOCATION -----------
 function getMyLocation() {
@@ -29,11 +33,11 @@ function getMyLocation() {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
-                cityName.textContent = data.name;
-                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png';
-                temp.textContent = Math.floor((data.main.temp - 32) * 5/ 9) +" °C";
-                conditions.textContent = data.weather[0].description
 
+                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png';
+                cityName.textContent = data.name;
+                temp.textContent = Math.floor((data.main.temp - 32) * 5/ 9) +" °C";
+                conditions.textContent = data.weather[0].description;
             })
         })
         console.log("Coordinates: ", lat, lon);
@@ -56,7 +60,7 @@ const loadIframe = (type, response) => {
     // Get id
     const { id } = track;
     
-    console.log({ track, id });
+    console.log({ track, id })
 
     // Generates new source
     const src = getIframeSrc(id);
@@ -72,7 +76,7 @@ const loadIframe = (type, response) => {
 
 
     console.log({iframe, track});
-    
+ 
     // Show iframe after removing previous elements
     const container = document.querySelector('#iframe-container');
     container.childNodes[0]?.remove();
@@ -84,7 +88,6 @@ const loadIframe = (type, response) => {
         btn.addEventListener('click', () => {
             const buttonId = btn.id.replace('-play', '');
             modal.style.display = "none";
-
             const types = {
                 fear: 'Fearful',
                 sad: 'Sad',
@@ -96,6 +99,7 @@ const loadIframe = (type, response) => {
             fetch(apiURL)
                 .then(response => response.json())
                 .then(response => loadIframe(type, response))
+                // .then(loadIframe.bind(type))
         })
     })
 
@@ -114,7 +118,6 @@ function searchFunction() {
       });
       window.open(searchInput, '_blank')
 }
-
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -142,3 +145,11 @@ window.onclick = function(event) {
   }
 }
 
+//------ SEARCH SONG -------
+function searchArtist() {
+    var textInput = document.querySelector('#input').value;
+    const url = 'https://www.deezer.com/search/'
+    var inputUrl = url + textInput
+    var win = window.open(inputUrl, '_blank')
+    win.focus
+}
