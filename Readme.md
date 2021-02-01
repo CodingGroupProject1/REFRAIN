@@ -21,4 +21,5 @@ Github, Visual studios code editor, (or other code editor software)
 * Thomas Kyle
 
 ## Screenshot
+
 ![](RefrainScreenshot.png)
