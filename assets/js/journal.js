@@ -8,7 +8,7 @@ var journal = document.querySelector("#journal");
 var currentDate = new Date();
 var entryIdCounter = 0;
 
-
+//----------- ADD ENTRY TO JOURNAL -----------
 var addEntry = function (event) {
     event.preventDefault();
 
@@ -25,7 +25,7 @@ var addEntry = function (event) {
 
 
         var journalEntries = JSON.parse(localStorage.getItem("journalEntries"));
-        if(journalEntries === null) {
+        if (journalEntries === null) {
             journalEntries = [];
         }
         var submitEntry = {
@@ -38,14 +38,14 @@ var addEntry = function (event) {
 
         console.log("entries", submitEntry.mood);
     } else {
-        alert("Please submit an entry!");
+        emptyEntry();
     }
 
     createEntry();
 
 }
 
-
+//------- FUNCTION TO CREATE JOURNAL ENTRY -------
 function createEntry() {
     // add in journal section
     var journalEntries = JSON.parse(localStorage.getItem("journalEntries")) || [];
@@ -82,30 +82,50 @@ function createEntry() {
         deleteBtn.textContent = "Delete Entry";
         entryContainer.appendChild(deleteBtn);
 
-        deleteBtn.addEventListener("click", function(event){
+        deleteBtn.addEventListener("click", function (event) {
             removeEntry(event);
         });
     }
 }
 
-var removeEntry = function(event) {
+//----------- DELETE ENTRY -------------
+var removeEntry = function (event) {
     var targetEl = event.target;
-   
+
     var entryId = targetEl.getAttribute("data-entry-id");
     deleteEntry(entryId);
-   var  localEntries = localStorage.getItem("journalEntries");
-   localEntries = JSON.parse(localEntries);
-   localEntries.splice(entryId,1);
-   localEntries = JSON.stringify(localEntries);
-   localStorage.setItem("journalEntries", localEntries);
-   createEntry();
-  
+    var localEntries = localStorage.getItem("journalEntries");
+    localEntries = JSON.parse(localEntries);
+    localEntries.splice(entryId, 1);
+    localEntries = JSON.stringify(localEntries);
+    localStorage.setItem("journalEntries", localEntries);
+    createEntry();
+
 }
 
-var deleteEntry = function(entryId) {
+var deleteEntry = function (entryId) {
     var selectedEntry = document.querySelector("div[data-entry-id='" + entryId + "']");
     selectedEntry.remove();
 }
+
+function emptyEntry() {
+    //Get modal
+    var modal = document.querySelector("#empty-entry");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 
 createEntry();
 
