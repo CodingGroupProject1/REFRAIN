@@ -20,6 +20,8 @@ Github, Visual studios code editor, (or other code editor software)
 * Shaylen Anita 
 * Thomas Kyle
 
+View the website here: codinggroupproject1.github.io/refrain/
+
 ## Screenshot
 
 ![RefrainScreenshot](https://user-images.githubusercontent.com/40303668/106402396-3f007a80-63f7-11eb-9533-3060db5bb70c.png)
