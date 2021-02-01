@@ -17,7 +17,7 @@ Github, Visual studios code editor, (or other code editor software)
 * Johann Taylor
 * Kristen Groller
 * Sam Brown
-* Shaylen Naidu
+* Shaylen Anita 
 * Thomas Kyle
 
 ## Screenshot
