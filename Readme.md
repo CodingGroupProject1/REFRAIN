@@ -19,3 +19,6 @@ Github, Visual studios code editor, (or other code editor software)
 * Sam Brown
 * Shaylen Naidu
 * Thomas Kyle
+
+## Screenshot
+![](RefrainLogo.png)
