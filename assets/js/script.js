@@ -28,15 +28,16 @@ function getMyLocation() {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         fetch(
-            'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
+            'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely,hourly,alerts&appid=f7e68c78a6c0589ffc5c75fdd1fe6b01')
         .then(function (response) {
             response.json()
             .then(function (data) {
                 console.log("Weather data: ", data);
 
-                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png';
-                temp.textContent = Math.floor((data.current.temp - 32) * 5/ 9) +" °C";
-                conditions.textContent = data.current.weather[0].description;
+                weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png';
+                cityName.textContent = data.name;
+                temp.textContent = Math.floor((data.main.temp - 32) * 5/ 9) +" °C";
+                conditions.textContent = data.weather[0].description;
             })
         })
         console.log("Coordinates: ", lat, lon);

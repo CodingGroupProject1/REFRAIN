@@ -12,8 +12,8 @@
   /* JUMBOTRON */
 #jumbotron {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   text-align: center;
   align-items: center;
   background-image: url("../../mohammad-alizade-DunSKupQL7g-unsplash.jpg");
@@ -22,32 +22,30 @@
   height: 740px;
 }
 
-.jumboText{
-  position: absolute;
-  left: 100px; 
-  top: 140px;
+.jumbotext{
+  margin-left: 5%;
   background-color: rgba(255, 255, 255, 0.6);
-  width: 700px;
-  height: 600px;
+  min-width: 10vw;
+  min-height: 10vh;
   font-size: 1.3vw;
-  justify-content: center;
-  display: inline;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
 }
 
 .jumboText p{
   text-align: center;
   padding: 10px;
+  margin: 0;
 }
 
 .weatherContainer {
-  position: ;
-  top: 140 px;
-  bottom: -10px; 
-  right: 35px;
-  background-color: rgba(255, 255, 255, 0.3);
-  width: 300px;
-  height: 410px;
-  box-sizing: inherit;
+  margin-right: 5%;
+  background-color: rgba(255, 255, 255, 0.5);
+  min-width: 300px;
+  min-height: 190px;
+  overflow: hidden;
 }
 
 #logo img{
@@ -162,16 +160,19 @@ h5 {
 }
 
 .weather-display{
-  top: 140px;
-  display: absolute;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   height: 50%;
 }
 
+.weather-display h2 {
+  font-size: 2vw;
+}
+
 .weather-details {
-  font-weight: bold;
+
   color: #222222;
   font-size: 3vw;
   margin: 0;
@@ -239,7 +240,7 @@ span {
   border: none;
   flex-direction: row;
   align-items: center;
-  line-height: 75 px;
+  line-height: 75px;
   font-size: 30px;
   color: rgb(35, 33, 56);
   margin-right: 3px;
@@ -252,7 +253,7 @@ span {
   border: none;
   flex-direction: row;
   align-items: center;
-  line-height: 75 px;
+  line-height: 75px;
   font-size: 30px;
   color: rgb(35, 33, 56);
   margin-left: 3px;
@@ -266,7 +267,7 @@ span {
   border: none;
   flex-direction: row;
   align-items: center;
-  line-height: 75 px;
+  line-height: 75px;
   font-size: 30px;
   color: rgb(35, 33, 56); 
   margin-left: 3px;
@@ -465,29 +466,34 @@ footer {
 
   .index {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-right: 25px;
   }
 
+  #jumbotron {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   
-  .jumboText{
-    position: absolute;
-    left: 100px; 
-    top: 200px;
+  .jumbotext{
     background-color: rgba(255, 255, 255, 0.6);
     width: 70vw;
     height: 50vh;
     font-size: 1.5vw;
+    margin: 25px 0 50px 0;
   }
 
-  .jumboText h3 {
+  .jumbotext h3 {
     font-size: 5vw;
   }
   
-  .jumboText p{
+  .jumbotext p{
     text-align: center;
+    margin: 0;
     padding: 10px;
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   
   
@@ -518,16 +524,17 @@ footer {
     font-size: 3.4vw;
     font-weight: bolder;
     line-height: 2;
-    
+  }
+
+  .weather-display h2 {
+    font-size: 3.5vw;
+    margin-bottom: 0;
   }
 
   .weatherContainer {
-    position: absolute;
-    bottom: -10px; 
-    right: 35px;
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 300px;
-    height: 410px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 3vw;
+    margin: 25px 0 25px 0;
   }
 
 }
