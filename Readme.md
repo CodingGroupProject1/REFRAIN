@@ -22,4 +22,5 @@ Github, Visual studios code editor, (or other code editor software)
 
 ## Screenshot
 
-![](RefrainScreenshot.png)
+![RefrainScreenshot](https://user-images.githubusercontent.com/40303668/106402396-3f007a80-63f7-11eb-9533-3060db5bb70c.png)
+
