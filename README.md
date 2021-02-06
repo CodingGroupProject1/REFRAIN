@@ -15,7 +15,7 @@ Refrain is a responsive website where one can view the weather in their current 
 * Shaylen Anita 
 * Thomas Kyle
 
-View the website here: codinggroupproject1.github.io/refrain/
+View the website here: [RefRain](https://codinggroupproject1.github.io/REFRAIN/)
 
 ## Screenshot
 
