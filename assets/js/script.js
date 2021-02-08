@@ -48,7 +48,7 @@ function getMyLocation() {
 }
 getMyLocation("Data: ");
 
-const getIframeSrc = (id) => `https://cors-anywhere.herokuapp.com/https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
+const getIframeSrc = (id) => `https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=EF5466&layout=&size=medium&type=playlist&id=${id}&app_id=1`;
 
 const loadIframe = (type, response) => {
     const { data } = response;
